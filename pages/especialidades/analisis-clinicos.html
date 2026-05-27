@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta name="description" content="Análisis Clínicos - Profesionales, información y solicitud de turnos">
+    <title>Centro de Salud | Análisis Clínicos</title>
+    <link rel="stylesheet" href="../../css/styles.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="../../index.html">🏥 Centro de Salud</a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../../index.html">Inicio</a></li>
+                <li><a href="../especialidades.html">Especialidades</a></li>
+                <li><a href="../estudios.html">Resultados de Estudios</a></li>
+                <li><a href="../faq.html">FAQ</a></li>
+                <li><a href="../galeria.html">Galería</a></li>
+                <li><a href="../institucional.html">El Centro</a></li>
+                <li><a href="../contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="titulo-especialidad">
+            <h1>Análisis Clínicos</h1>
+            <p>Laboratorio especializado en análisis de sangre, orina y estudios complementarios.</p>
+        </section>
+
+        <section class="profesionales">
+            <h2>Nuestros profesionales</h2>
+            <div class="tarjetas-profesionales">
+                <div class="tarjeta-profesional">
+                    <div class="foto-profesional">
+                        <img src="../../assets/img/profesionales/bioq-javier-medina.jpg"
+                            alt="Foto del Bioq. Javier Medina"
+                            onerror="this.src='https://placehold.co/150x150?text=Bioq.+Medina'">
+                    </div>
+                    <h3>Bioq. Javier Medina</h3>
+                    <p><strong>Especialidad:</strong> Bioquímica clínica</p>
+                    <p><strong>Matrícula:</strong> MQ 22222</p>
+                    <p><strong>Horarios:</strong> Lun a Vie 7 a 13hs</p>
+                </div>
+                <div class="tarjeta-profesional">
+                    <div class="foto-profesional">
+                        <img src="../../assets/img/profesionales/bioq-silvia-rojas.jpg"
+                            alt="Foto de la Bioq. Silvia Rojas"
+                            onerror="this.src='https://placehold.co/150x150?text=Bioq.+Rojas'">
+                    </div>
+                    <h3>Bioq. Silvia Rojas</h3>
+                    <p><strong>Especialidad:</strong> Microbiología</p>
+                    <p><strong>Matrícula:</strong> MQ 23232</p>
+                    <p><strong>Horarios:</strong> Lun a Vie 13 a 19hs</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="info-especialidad">
+            <h2>¿Qué estudios realizamos?</h2>
+            <ul>
+                <li>Análisis de sangre (hemograma, glucemia, colesterol)</li>
+                <li>Estudios hormonales</li>
+                <li>Análisis de orina</li>
+                <li>Cultivos microbiológicos</li>
+                <li>Marcadores tumorales</li>
+            </ul>
+            <p>Resultados rápidos y precisos. Podés consultar el estado de tus estudios desde nuestra sección de
+                Resultados.</p>
+        </section>
+
+        <section class="formulario-turno">
+            <h2>Solicitar turno para análisis</h2>
+            <form action="#" method="post">
+                <div class="campo-formulario">
+                    <label for="nombre">Nombre completo *</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div class="campo-formulario">
+                    <label for="email">Correo electrónico *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="campo-formulario">
+                    <label for="telefono">Teléfono *</label>
+                    <input type="tel" id="telefono" name="telefono" required>
+                </div>
+                <div class="campo-formulario">
+                    <label for="profesional">Seleccionar profesional *</label>
+                    <select id="profesional" name="profesional" required>
+                        <option value="">-- Elegir profesional --</option>
+                        <option value="bioq-javier-medina">Bioq. Javier Medina</option>
+                        <option value="bioq-silvia-rojas">Bioq. Silvia Rojas</option>
+                    </select>
+                </div>
+                <div class="campo-formulario">
+                    <label for="fecha">Fecha preferencial</label>
+                    <input type="date" id="fecha" name="fecha">
+                </div>
+                <div class="campo-formulario">
+                    <label for="horario">Horario preferencial</label>
+                    <select id="horario" name="horario">
+                        <option value="">-- Elegir horario --</option>
+                        <option value="manana">Mañana (7 a 13hs)</option>
+                        <option value="tarde">Tarde (13 a 19hs)</option>
+                    </select>
+                </div>
+                <div class="campo-formulario">
+                    <label for="obra-social">Obra social (opcional)</label>
+                    <input type="text" id="obra-social" name="obra-social">
+                </div>
+                <div class="campo-formulario">
+                    <label for="comentarios">Comentarios adicionales</label>
+                    <textarea id="comentarios" name="comentarios" rows="4"
+                        placeholder="¿Necesitas ayuno o alguna preparación especial? Contanos..."></textarea>
+                </div>
+                <button type="submit" class="btn">Solicitar turno</button>
+                <p class="nota">* Campos obligatorios. Te contactaremos para confirmar el turno.</p>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-contacto">
+            <p>📞 Central: 011-4567-8901</p>
+            <p>🆘 Urgencias: 0800-123-4567</p>
+            <p>📧 consultas@centrosalud.com</p>
+            <p>📍 Av. Siempre Viva 123, Ciudad</p>
+        </div>
+        <div class="footer-horarios">
+            <p>🕒 Atención al público: Lun a Vie 8 a 20hs</p>
+            <p>🕒 Guardia: 24hs - 365 días</p>
+        </div>
+        <div class="footer-copyright">
+            <p>&copy; 2024 Centro de Salud - Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

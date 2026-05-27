@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta name="description" content="Neurología - Profesionales, información y solicitud de turnos">
+    <title>Centro de Salud | Neurología</title>
+    <link rel="stylesheet" href="../../css/styles.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="../../index.html">🏥 Centro de Salud</a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../../index.html">Inicio</a></li>
+                <li><a href="../especialidades.html">Especialidades</a></li>
+                <li><a href="../estudios.html">Resultados de Estudios</a></li>
+                <li><a href="../faq.html">FAQ</a></li>
+                <li><a href="../galeria.html">Galería</a></li>
+                <li><a href="../institucional.html">El Centro</a></li>
+                <li><a href="../contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="titulo-especialidad">
+            <h1>Neurología</h1>
+            <p>Especialidad dedicada al estudio y tratamiento de las enfermedades del sistema nervioso.</p>
+        </section>
+
+        <section class="profesionales">
+            <h2>Nuestros profesionales</h2>
+            <div class="tarjetas-profesionales">
+                <div class="tarjeta-profesional">
+                    <div class="foto-profesional">
+                        <img src="../../assets/img/profesionales/dr-roberto-garcia.jpg"
+                            alt="Foto del Dr. Roberto García"
+                            onerror="this.src='https://placehold.co/150x150?text=Dr.+García'">
+                    </div>
+
+                    <div class="info-profesional">
+                        <h3>Dr. Roberto García</h3>
+                        <p><strong>Especialidad:</strong> Cardiología clínica</p>
+                        <p><strong>Matrícula:</strong> MP 12345</p>
+                        <p><strong>Horarios:</strong> Lun, Mié, Vie 9 a 13hs</p>
+
+                        <a href="#" class="btn-perfil">Ver perfil</a>
+                    </div>
+                </div>
+
+                <div class="tarjeta-profesional">
+                    <div class="foto-profesional">
+                        <img src="../../assets/img/profesionales/dra-ana-martinez.jpg"
+                            alt="Foto de la Dra. Ana Martínez"
+                            onerror="this.src='https://placehold.co/150x150?text=Dra.+Martínez'">
+                    </div>
+
+                    <div class="info-profesional">
+                        <h3>Dra. Ana Martínez</h3>
+                        <p><strong>Especialidad:</strong> Cardiología infantil</p>
+                        <p><strong>Matrícula:</strong> MP 67890</p>
+                        <p><strong>Horarios:</strong> Mar, Jue 14 a 18hs</p>
+
+                        <a href="#" class="btn-perfil">Ver perfil</a>
+                    </div>
+                </div>
+        </section>
+
+        <section class="info-especialidad">
+            <h2>¿Qué tratamos en Neurología?</h2>
+            <ul>
+                <li>Cefaleas y migrañas</li>
+                <li>Epilepsia</li>
+                <li>Enfermedad de Parkinson</li>
+                <li>Accidentes cerebrovasculares</li>
+                <li>Trastornos del sueño</li>
+            </ul>
+            <p>Diagnóstico avanzado con estudios de neuroimágenes y electroencefalograma.</p>
+        </section>
+
+        <section class="formulario-turno">
+            <h2>Solicitar turno en Neurología</h2>
+            <form action="#" method="post">
+                <div class="campo-formulario">
+                    <label for="nombre">Nombre completo *</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div class="campo-formulario">
+                    <label for="email">Correo electrónico *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="campo-formulario">
+                    <label for="telefono">Teléfono *</label>
+                    <input type="tel" id="telefono" name="telefono" required>
+                </div>
+                <div class="campo-formulario">
+                    <label for="profesional">Seleccionar profesional *</label>
+                    <select id="profesional" name="profesional" required>
+                        <option value="">-- Elegir profesional --</option>
+                        <option value="dr-martin-sanchez">Dr. Martín Sánchez</option>
+                        <option value="dra-carolina-diaz">Dra. Carolina Díaz</option>
+                    </select>
+                </div>
+                <div class="campo-formulario">
+                    <label for="fecha">Fecha preferencial</label>
+                    <input type="date" id="fecha" name="fecha">
+                </div>
+                <div class="campo-formulario">
+                    <label for="horario">Horario preferencial</label>
+                    <select id="horario" name="horario">
+                        <option value="">-- Elegir horario --</option>
+                        <option value="manana">Mañana (9 a 14hs)</option>
+                        <option value="tarde">Tarde (13 a 18hs)</option>
+                    </select>
+                </div>
+                <div class="campo-formulario">
+                    <label for="obra-social">Obra social (opcional)</label>
+                    <input type="text" id="obra-social" name="obra-social">
+                </div>
+                <div class="campo-formulario">
+                    <label for="comentarios">Comentarios adicionales</label>
+                    <textarea id="comentarios" name="comentarios" rows="4"
+                        placeholder="Contanos si tenés alguna preferencia o necesidad especial..."></textarea>
+                </div>
+                <button type="submit" class="btn">Solicitar turno</button>
+                <p class="nota">* Campos obligatorios. Te contactaremos para confirmar el turno.</p>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-contacto">
+            <p>📞 Central: 011-4567-8901</p>
+            <p>🆘 Urgencias: 0800-123-4567</p>
+            <p>📧 consultas@centrosalud.com</p>
+            <p>📍 Av. Siempre Viva 123, Ciudad</p>
+        </div>
+        <div class="footer-horarios">
+            <p>🕒 Atención al público: Lun a Vie 8 a 20hs</p>
+            <p>🕒 Guardia: 24hs - 365 días</p>
+        </div>
+        <div class="footer-copyright">
+            <p>&copy; 2024 Centro de Salud - Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta name="description" content="Medicina Clínica - Profesionales, información y solicitud de turnos">
+    <title>Centro de Salud | Medicina Clínica</title>
+    <link rel="stylesheet" href="../../css/styles.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="../../index.html">🏥 Centro de Salud</a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../../index.html">Inicio</a></li>
+                <li><a href="../especialidades.html">Especialidades</a></li>
+                <li><a href="../estudios.html">Resultados de Estudios</a></li>
+                <li><a href="../faq.html">FAQ</a></li>
+                <li><a href="../galeria.html">Galería</a></li>
+                <li><a href="../institucional.html">El Centro</a></li>
+                <li><a href="../contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="titulo-especialidad">
+            <h1>Medicina Clínica</h1>
+            <p>Especialidad dedicada al diagnóstico, tratamiento y seguimiento de enfermedades del adulto.</p>
+        </section>
+
+        <section class="profesionales">
+            <h2>Nuestros profesionales</h2>
+            <div class="tarjetas-profesionales">
+                <div class="tarjeta-profesional">
+                    <div class="foto-profesional">
+                        <img src="../../assets/img/profesionales/dr-carlos-lopez.jpg" alt="Foto del Dr. Carlos López"
+                            onerror="this.src='https://placehold.co/150x150?text=Dr.+López'">
+                    </div>
+                    <h3>Dr. Carlos López</h3>
+                    <p><strong>Especialidad:</strong> Clínica médica</p>
+                    <p><strong>Matrícula:</strong> MP 11111</p>
+                    <p><strong>Horarios:</strong> Lun, Mié, Vie 8 a 12hs</p>
+                </div>
+                <div class="tarjeta-profesional">
+                    <div class="foto-profesional">
+                        <img src="../../assets/img/profesionales/dra-laura-fernandez.jpg"
+                            alt="Foto de la Dra. Laura Fernández"
+                            onerror="this.src='https://placehold.co/150x150?text=Dra.+Fernández'">
+                    </div>
+                    <h3>Dra. Laura Fernández</h3>
+                    <p><strong>Especialidad:</strong> Medicina preventiva</p>
+                    <p><strong>Matrícula:</strong> MP 22222</p>
+                    <p><strong>Horarios:</strong> Mar, Jue 14 a 18hs</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="info-especialidad">
+            <h2>¿Qué tratamos en Medicina Clínica?</h2>
+            <ul>
+                <li>Hipertensión arterial</li>
+                <li>Diabetes</li>
+                <li>Infecciones respiratorias</li>
+                <li>Control de salud anual</li>
+                <li>Enfermedades crónicas</li>
+            </ul>
+            <p>Atención integral para el adulto, con seguimiento personalizado.</p>
+        </section>
+
+        <section class="formulario-turno">
+            <h2>Solicitar turno en Medicina Clínica</h2>
+            <form action="#" method="post">
+                <div class="campo-formulario">
+                    <label for="nombre">Nombre completo *</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div class="campo-formulario">
+                    <label for="email">Correo electrónico *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="campo-formulario">
+                    <label for="telefono">Teléfono *</label>
+                    <input type="tel" id="telefono" name="telefono" required>
+                </div>
+                <div class="campo-formulario">
+                    <label for="profesional">Seleccionar profesional *</label>
+                    <select id="profesional" name="profesional" required>
+                        <option value="">-- Elegir profesional --</option>
+                        <option value="dr-carlos-lopez">Dr. Carlos López</option>
+                        <option value="dra-laura-fernandez">Dra. Laura Fernández</option>
+                    </select>
+                </div>
+                <div class="campo-formulario">
+                    <label for="fecha">Fecha preferencial</label>
+                    <input type="date" id="fecha" name="fecha">
+                </div>
+                <div class="campo-formulario">
+                    <label for="horario">Horario preferencial</label>
+                    <select id="horario" name="horario">
+                        <option value="">-- Elegir horario --</option>
+                        <option value="manana">Mañana (8 a 12hs)</option>
+                        <option value="tarde">Tarde (14 a 18hs)</option>
+                    </select>
+                </div>
+                <div class="campo-formulario">
+                    <label for="obra-social">Obra social (opcional)</label>
+                    <input type="text" id="obra-social" name="obra-social">
+                </div>
+                <div class="campo-formulario">
+                    <label for="comentarios">Comentarios adicionales</label>
+                    <textarea id="comentarios" name="comentarios" rows="4"
+                        placeholder="Contanos si tenés alguna preferencia o necesidad especial..."></textarea>
+                </div>
+                <button type="submit" class="btn">Solicitar turno</button>
+                <p class="nota">* Campos obligatorios. Te contactaremos para confirmar el turno.</p>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-contacto">
+            <p>📞 Central: 011-4567-8901</p>
+            <p>🆘 Urgencias: 0800-123-4567</p>
+            <p>📧 consultas@centrosalud.com</p>
+            <p>📍 Av. Siempre Viva 123, Ciudad</p>
+        </div>
+        <div class="footer-horarios">
+            <p>🕒 Atención al público: Lun a Vie 8 a 20hs</p>
+            <p>🕒 Guardia: 24hs - 365 días</p>
+        </div>
+        <div class="footer-copyright">
+            <p>&copy; 2024 Centro de Salud - Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
