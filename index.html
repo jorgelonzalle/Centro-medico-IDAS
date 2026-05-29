@@ -33,12 +33,42 @@
     <!-- ===== MAIN CONTENT ===== -->
     <main>
 
-        <!-- SECCIÓN: URGENCIAS (HU-01) -->
+<!-- SECCIÓN: URGENCIAS (HU-01) -->
         <section class="urgencias">
-            <h1>Urgencias 24/7</h1>
-            <p>Atención inmediata las 24 horas, todos los días del año.</p>
-            <p><strong>Teléfono de urgencias: 0800-123-4567</strong></p>
-            <a href="pages/contacto.html" class="btn">Acudir a urgencias →</a>
+            <div class="urgencias-header">
+                <h1>Atención de Urgencias 24HS. </h1>
+                <p class="urgencias-sub">Atención médica inmediata y personalizada los 365 días del año.</p>
+                
+                <!-- Botón reubicado arriba y renombrado -->
+                <div class="urgencias-main-action">
+                    <a href="tel:08001234567" class="btn btn-urgencia">
+                        <span>📞 Llamar a urgencias</span>
+                        <span class="btn-arrow">→</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="urgencias-grid">
+                <!-- Tarjeta de Teléfono -->
+                <div class="urgencias-card tel-card">
+                    <div class="card-icon"></div>
+                    <div class="card-info">
+                        <h3>Línea Directa</h3>
+                        <a href="tel:08001234567" class="link-tel">0800-123-4567</a>
+                        <p>Atención directa las 24 horas</p>
+                    </div>
+                </div>
+
+                <!-- Tarjeta de Dirección -->
+                <div class="urgencias-card dir-card">
+                    <div class="card-icon"></div>
+                    <div class="card-info">
+                        <h3>Ubicación de Guardia</h3>
+                        <p class="direccion-texto">Av. Siempre Viva 123, Ciudad</p>
+                        <p>Ingreso directo por rampa de ambulancias</p>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!-- SECCIÓN: SERVICIOS DISPONIBLES (HU-02) -->
