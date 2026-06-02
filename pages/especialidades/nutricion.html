@@ -12,23 +12,32 @@
 <body>
 
     <header>
-        <div class="logo">
-            <a href="../../index.html">🏥 Centro de Salud</a>
+        <div class="container-nav">
+            <div class="header-wrap">
+                <div class="logo-box">
+                    <div class="logo">
+                        <a href="../../index.html">🏥 Centro de Salud</a>
+                    </div>
+                </div>
+                <div class="nav-box">
+                    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+                    <label for="menu-toggle" class="menu-icon">☰</label>
+                    <nav>
+                        <ul>
+                            <li><a href="../../index.html">Inicio</a></li>
+                            <li><a href="../especialidades.html">Especialidades</a></li>
+                            <li><a href="../faq.html">FAQ</a></li>
+                            <li><a href="../galeria.html">Galería</a></li>
+                            <li><a href="../institucional.html">El Centro</a></li>
+                            <li><a href="../contacto.html">Contacto</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
         </div>
-        <nav>
-            <ul>
-                <li><a href="../../index.html">Inicio</a></li>
-                <li><a href="../especialidades.html">Especialidades</a></li>
-                <li><a href="../estudios.html">Resultados de Estudios</a></li>
-                <li><a href="../faq.html">FAQ</a></li>
-                <li><a href="../galeria.html">Galería</a></li>
-                <li><a href="../institucional.html">El Centro</a></li>
-                <li><a href="../contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
     </header>
 
-    <main>
+    <main class="no-banner">
 
         <section class="titulo-especialidad">
             <h1>Nutrición</h1>
@@ -40,25 +49,31 @@
             <div class="tarjetas-profesionales">
                 <div class="tarjeta-profesional">
                     <div class="foto-profesional">
-                        <img src="../../assets/img/profesionales/lic-vanesa-lopez.jpg"
-                            alt="Foto de la Lic. Vanesa López"
-                            onerror="this.src='https://placehold.co/150x150?text=Lic.+López'">
+                        <img src="../../assets/img/profesionales/dra-sofia-herrera.jpg"
+                            alt="Foto de la Dra. Sofía Herrera"
+                            onerror="this.src='https://placehold.co/150x150?text=Dra.+Herrera'">
                     </div>
-                    <h3>Lic. Vanesa López</h3>
-                    <p><strong>Especialidad:</strong> Nutrición clínica</p>
-                    <p><strong>Matrícula:</strong> MN 12121</p>
-                    <p><strong>Horarios:</strong> Lun, Mié 9 a 14hs</p>
+                    <div class="info-profesional">
+                        <h3>Dra. Sofía Herrera</h3>
+                        <p><strong>Especialidad:</strong> Nutrición y Dietética</p>
+                        <p><strong>Matrícula:</strong> MP 33445</p>
+                        <p><strong>Horarios:</strong> Mié, Vie 14 a 19hs</p>
+                        <a href="#" class="btn-perfil">Ver perfil</a>
+                    </div>
                 </div>
+
                 <div class="tarjeta-profesional">
                     <div class="foto-profesional">
-                        <img src="../../assets/img/profesionales/lic-gabriel-morales.jpg"
-                            alt="Foto del Lic. Gabriel Morales"
-                            onerror="this.src='https://placehold.co/150x150?text=Lic.+Morales'">
+                        <img src="../../assets/img/profesionales/lic-nicolas-cruz.jpg" alt="Foto del Lic. Nicolás Cruz"
+                            onerror="this.src='https://placehold.co/150x150?text=Lic.+Cruz'">
                     </div>
-                    <h3>Lic. Gabriel Morales</h3>
-                    <p><strong>Especialidad:</strong> Nutrición deportiva</p>
-                    <p><strong>Matrícula:</strong> MN 13131</p>
-                    <p><strong>Horarios:</strong> Mar, Jue, Vie 13 a 18hs</p>
+                    <div class="info-profesional">
+                        <h3>Lic. Nicolás Cruz</h3>
+                        <p><strong>Especialidad:</strong> Nutrición Deportiva</p>
+                        <p><strong>Matrícula:</strong> MP 33499</p>
+                        <p><strong>Horarios:</strong> Lun, Mar 09 a 14hs</p>
+                        <a href="#" class="btn-perfil">Ver perfil</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -94,8 +109,8 @@
                     <label for="profesional">Seleccionar profesional *</label>
                     <select id="profesional" name="profesional" required>
                         <option value="">-- Elegir profesional --</option>
-                        <option value="lic-vanesa-lopez">Lic. Vanesa López</option>
-                        <option value="lic-gabriel-morales">Lic. Gabriel Morales</option>
+                        <option value="dra-sofia-herrera">Dra. Sofía Herrera</option>
+                        <option value="lic-nicolas-cruz">Lic. Nicolás Cruz</option>
                     </select>
                 </div>
                 <div class="campo-formulario">
