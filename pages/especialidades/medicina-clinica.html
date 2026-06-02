@@ -12,23 +12,32 @@
 <body>
 
     <header>
-        <div class="logo">
-            <a href="../../index.html">🏥 Centro de Salud</a>
+        <div class="container-nav">
+            <div class="header-wrap">
+                <div class="logo-box">
+                    <div class="logo">
+                        <a href="../../index.html">🏥 Centro de Salud</a>
+                    </div>
+                </div>
+                <div class="nav-box">
+                    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+                    <label for="menu-toggle" class="menu-icon">☰</label>
+                    <nav>
+                        <ul>
+                            <li><a href="../../index.html">Inicio</a></li>
+                            <li><a href="../especialidades.html">Especialidades</a></li>
+                            <li><a href="../faq.html">FAQ</a></li>
+                            <li><a href="../galeria.html">Galería</a></li>
+                            <li><a href="../institucional.html">El Centro</a></li>
+                            <li><a href="../contacto.html">Contacto</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
         </div>
-        <nav>
-            <ul>
-                <li><a href="../../index.html">Inicio</a></li>
-                <li><a href="../especialidades.html">Especialidades</a></li>
-                <li><a href="../estudios.html">Resultados de Estudios</a></li>
-                <li><a href="../faq.html">FAQ</a></li>
-                <li><a href="../galeria.html">Galería</a></li>
-                <li><a href="../institucional.html">El Centro</a></li>
-                <li><a href="../contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
     </header>
 
-    <main>
+    <main class="no-banner">
 
         <section class="titulo-especialidad">
             <h1>Medicina Clínica</h1>
@@ -40,24 +49,31 @@
             <div class="tarjetas-profesionales">
                 <div class="tarjeta-profesional">
                     <div class="foto-profesional">
-                        <img src="../../assets/img/profesionales/dr-carlos-lopez.jpg" alt="Foto del Dr. Carlos López"
-                            onerror="this.src='https://placehold.co/150x150?text=Dr.+López'">
+                        <img src="../../assets/img/profesionales/dr-ricardo-sanchez.jpg"
+                            alt="Foto del Dr. Ricardo Sánchez"
+                            onerror="this.src='https://placehold.co/150x150?text=Dr.+Sánchez'">
                     </div>
-                    <h3>Dr. Carlos López</h3>
-                    <p><strong>Especialidad:</strong> Clínica médica</p>
-                    <p><strong>Matrícula:</strong> MP 11111</p>
-                    <p><strong>Horarios:</strong> Lun, Mié, Vie 8 a 12hs</p>
+                    <div class="info-profesional">
+                        <h3>Dr. Ricardo Sánchez</h3>
+                        <p><strong>Especialidad:</strong> Medicina Clínica</p>
+                        <p><strong>Matrícula:</strong> MP 11223</p>
+                        <p><strong>Horarios:</strong> Lun a Vie 08 a 12hs</p>
+                        <a href="#" class="btn-perfil">Ver perfil</a>
+                    </div>
                 </div>
+
                 <div class="tarjeta-profesional">
                     <div class="foto-profesional">
-                        <img src="../../assets/img/profesionales/dra-laura-fernandez.jpg"
-                            alt="Foto de la Dra. Laura Fernández"
-                            onerror="this.src='https://placehold.co/150x150?text=Dra.+Fernández'">
+                        <img src="../../assets/img/profesionales/dra-andrea-paz.jpg" alt="Foto de la Dra. Andrea Paz"
+                            onerror="this.src='https://placehold.co/150x150?text=Dra.+Paz'">
                     </div>
-                    <h3>Dra. Laura Fernández</h3>
-                    <p><strong>Especialidad:</strong> Medicina preventiva</p>
-                    <p><strong>Matrícula:</strong> MP 22222</p>
-                    <p><strong>Horarios:</strong> Mar, Jue 14 a 18hs</p>
+                    <div class="info-profesional">
+                        <h3>Dra. Andrea Paz</h3>
+                        <p><strong>Especialidad:</strong> Medicina General</p>
+                        <p><strong>Matrícula:</strong> MP 11277</p>
+                        <p><strong>Horarios:</strong> Lun a Jue 14 a 18hs</p>
+                        <a href="#" class="btn-perfil">Ver perfil</a>
+                    </div>
                 </div>
             </div>
         </section>
