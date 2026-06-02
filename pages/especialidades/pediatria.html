@@ -12,23 +12,32 @@
 <body>
 
     <header>
-        <div class="logo">
-            <a href="../../index.html">🏥 Centro de Salud</a>
+        <div class="container-nav">
+            <div class="header-wrap">
+                <div class="logo-box">
+                    <div class="logo">
+                        <a href="../../index.html">🏥 Centro de Salud</a>
+                    </div>
+                </div>
+                <div class="nav-box">
+                    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+                    <label for="menu-toggle" class="menu-icon">☰</label>
+                    <nav>
+                        <ul>
+                            <li><a href="../../index.html">Inicio</a></li>
+                            <li><a href="../especialidades.html">Especialidades</a></li>
+                            <li><a href="../faq.html">FAQ</a></li>
+                            <li><a href="../galeria.html">Galería</a></li>
+                            <li><a href="../institucional.html">El Centro</a></li>
+                            <li><a href="../contacto.html">Contacto</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
         </div>
-        <nav>
-            <ul>
-                <li><a href="../../index.html">Inicio</a></li>
-                <li><a href="../especialidades.html">Especialidades</a></li>
-                <li><a href="../estudios.html">Resultados de Estudios</a></li>
-                <li><a href="../faq.html">FAQ</a></li>
-                <li><a href="../galeria.html">Galería</a></li>
-                <li><a href="../institucional.html">El Centro</a></li>
-                <li><a href="../contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
     </header>
 
-    <main>
+    <main class="no-banner">
 
         <section class="titulo-especialidad">
             <h1>Pediatría</h1>
@@ -40,24 +49,32 @@
             <div class="tarjetas-profesionales">
                 <div class="tarjeta-profesional">
                     <div class="foto-profesional">
-                        <img src="../../assets/img/profesionales/dr-julio-morales.jpg" alt="Foto del Dr. Julio Morales"
-                            onerror="this.src='https://placehold.co/150x150?text=Dr.+Morales'">
+                        <img src="../../assets/img/profesionales/dra-clara-castro.jpg"
+                            alt="Foto de la Dra. Clara Castro"
+                            onerror="this.src='https://placehold.co/150x150?text=Dra.+Castro'">
                     </div>
-                    <h3>Dr. Julio Morales</h3>
-                    <p><strong>Especialidad:</strong> Pediatría general</p>
-                    <p><strong>Matrícula:</strong> MP 77777</p>
-                    <p><strong>Horarios:</strong> Lun, Mié, Vie 9 a 13hs</p>
+                    <div class="info-profesional">
+                        <h3>Dra. Clara Castro</h3>
+                        <p><strong>Especialidad:</strong> Pediatría General</p>
+                        <p><strong>Matrícula:</strong> MP 77889</p>
+                        <p><strong>Horarios:</strong> Lun a Jue 10 a 15hs</p>
+                        <a href="#" class="btn-perfil">Ver perfil</a>
+                    </div>
                 </div>
+
                 <div class="tarjeta-profesional">
                     <div class="foto-profesional">
-                        <img src="../../assets/img/profesionales/dra-andrea-rodriguez.jpg"
-                            alt="Foto de la Dra. Andrea Rodríguez"
-                            onerror="this.src='https://placehold.co/150x150?text=Dra.+Rodríguez'">
+                        <img src="../../assets/img/profesionales/dr-hugo-valenzuela.jpg"
+                            alt="Foto del Dr. Hugo Valenzuela"
+                            onerror="this.src='https://placehold.co/150x150?text=Dr.+Valenzuela'">
                     </div>
-                    <h3>Dra. Andrea Rodríguez</h3>
-                    <p><strong>Especialidad:</strong> Neonatología</p>
-                    <p><strong>Matrícula:</strong> MP 88888</p>
-                    <p><strong>Horarios:</strong> Mar, Jue 14 a 18hs</p>
+                    <div class="info-profesional">
+                        <h3>Dr. Hugo Valenzuela</h3>
+                        <p><strong>Especialidad:</strong> Neonatología</p>
+                        <p><strong>Matrícula:</strong> MP 77811</p>
+                        <p><strong>Horarios:</strong> Mar, Jue, Vie 15 a 19hs</p>
+                        <a href="#" class="btn-perfil">Ver perfil</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -97,8 +114,8 @@
                     <label for="profesional">Seleccionar profesional *</label>
                     <select id="profesional" name="profesional" required>
                         <option value="">-- Elegir profesional --</option>
-                        <option value="dr-julio-morales">Dr. Julio Morales</option>
-                        <option value="dra-andrea-rodriguez">Dra. Andrea Rodríguez</option>
+                        <option value="dra-clara-castro">Dra. Clara Castro</option>
+                        <option value="dr-hugo-valenzuela">Dr. Hugo Valenzuela</option>
                     </select>
                 </div>
                 <div class="campo-formulario">
