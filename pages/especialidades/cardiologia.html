@@ -11,72 +11,75 @@
 
 <body>
 
-    <!-- ===== HEADER ===== -->
     <header>
-        <div class="logo">
-            <a href="../../index.html">🏥 Centro de Salud</a>
+        <div class="container-nav">
+            <div class="header-wrap">
+                <div class="logo-box">
+                    <div class="logo">
+                        <a href="../../index.html">🏥 Centro de Salud</a>
+                    </div>
+                </div>
+                <div class="nav-box">
+                    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+                    <label for="menu-toggle" class="menu-icon">☰</label>
+                    <nav>
+                        <ul>
+                            <li><a href="../../index.html">Inicio</a></li>
+                            <li><a href="../especialidades.html">Especialidades</a></li>
+                            <li><a href="../faq.html">FAQ</a></li>
+                            <li><a href="../galeria.html">Galería</a></li>
+                            <li><a href="../institucional.html">El Centro</a></li>
+                            <li><a href="../contacto.html">Contacto</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
         </div>
-        <nav>
-            <ul>
-                <li><a href="../../index.html">Inicio</a></li>
-                <li><a href="../especialidades.html">Especialidades</a></li>
-                <li><a href="../estudios.html">Resultados de Estudios</a></li>
-                <li><a href="../faq.html">FAQ</a></li>
-                <li><a href="../galeria.html">Galería</a></li>
-                <li><a href="../institucional.html">El Centro</a></li>
-                <li><a href="../contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
     </header>
 
-    <!-- ===== MAIN CONTENT ===== -->
-    <main>
+    <main class="no-banner">
 
-        <!-- SECCIÓN: TÍTULO DE LA ESPECIALIDAD -->
         <section class="titulo-especialidad">
             <h1>Cardiología</h1>
             <p>Especialidad médica dedicada al diagnóstico y tratamiento de las enfermedades del corazón y el sistema
                 circulatorio.</p>
         </section>
 
-        <!-- SECCIÓN: PROFESIONALES (HU-03 / HU-06) -->
         <section class="profesionales">
             <h2>Nuestros profesionales</h2>
-            <div class="tarjeta-profesional">
-                <div class="foto-profesional">
-                    <img src="../../assets/img/profesionales/dr-roberto-garcia.jpg" alt="Foto del Dr. Roberto García"
-                        onerror="this.src='https://placehold.co/150x150?text=Dr.+García'">
+            <div class="tarjetas-profesionales">
+                <div class="tarjeta-profesional">
+                    <div class="foto-profesional">
+                        <img src="../../assets/img/profesionales/dr-roberto-garcia.jpg"
+                            alt="Foto del Dr. Roberto García"
+                            onerror="this.src='https://placehold.co/150x150?text=Dr.+García'">
+                    </div>
+                    <div class="info-profesional">
+                        <h3>Dr. Roberto García</h3>
+                        <p><strong>Especialidad:</strong> Cardiología clínica</p>
+                        <p><strong>Matrícula:</strong> MP 12345</p>
+                        <p><strong>Horarios:</strong> Lun, Mié, Vie 9 a 13hs</p>
+                        <a href="#" class="btn-perfil">Ver perfil</a>
+                    </div>
                 </div>
 
-                <div class="info-profesional">
-                    <h3>Dr. Roberto García</h3>
-                    <p><strong>Especialidad:</strong> Cardiología clínica</p>
-                    <p><strong>Matrícula:</strong> MP 12345</p>
-                    <p><strong>Horarios:</strong> Lun, Mié, Vie 9 a 13hs</p>
-
-                    <a href="#" class="btn-perfil">Ver perfil</a>
+                <div class="tarjeta-profesional">
+                    <div class="foto-profesional">
+                        <img src="../../assets/img/profesionales/dra-ana-martinez.jpg"
+                            alt="Foto de la Dra. Ana Martínez"
+                            onerror="this.src='https://placehold.co/150x150?text=Dra.+Martínez'">
+                    </div>
+                    <div class="info-profesional">
+                        <h3>Dra. Ana Martínez</h3>
+                        <p><strong>Especialidad:</strong> Cardiología infantil</p>
+                        <p><strong>Matrícula:</strong> MP 67890</p>
+                        <p><strong>Horarios:</strong> Mar, Jue 14 a 18hs</p>
+                        <a href="#" class="btn-perfil">Ver perfil</a>
+                    </div>
                 </div>
-            </div>
-
-            <div class="tarjeta-profesional">
-                <div class="foto-profesional">
-                    <img src="../../assets/img/profesionales/dra-ana-martinez.jpg" alt="Foto de la Dra. Ana Martínez"
-                        onerror="this.src='https://placehold.co/150x150?text=Dra.+Martínez'">
-                </div>
-
-                <div class="info-profesional">
-                    <h3>Dra. Ana Martínez</h3>
-                    <p><strong>Especialidad:</strong> Cardiología infantil</p>
-                    <p><strong>Matrícula:</strong> MP 67890</p>
-                    <p><strong>Horarios:</strong> Mar, Jue 14 a 18hs</p>
-
-                    <a href="#" class="btn-perfil">Ver perfil</a>
-                </div>
-            </div>
             </div>
         </section>
 
-        <!-- SECCIÓN: INFORMACIÓN DE LA ESPECIALIDAD -->
         <section class="info-especialidad">
             <h2>¿Qué tratamos en Cardiología?</h2>
             <ul>
@@ -89,26 +92,21 @@
             <p>Contamos con tecnología de última generación para el diagnóstico preciso y tratamiento oportuno.</p>
         </section>
 
-        <!-- SECCIÓN: FORMULARIO DE SOLICITUD DE TURNO (HU-09) -->
         <section class="formulario-turno">
             <h2>Solicitar turno en Cardiología</h2>
             <form action="#" method="post">
-
                 <div class="campo-formulario">
                     <label for="nombre">Nombre completo *</label>
                     <input type="text" id="nombre" name="nombre" required>
                 </div>
-
                 <div class="campo-formulario">
                     <label for="email">Correo electrónico *</label>
                     <input type="email" id="email" name="email" required>
                 </div>
-
                 <div class="campo-formulario">
                     <label for="telefono">Teléfono *</label>
                     <input type="tel" id="telefono" name="telefono" required>
                 </div>
-
                 <div class="campo-formulario">
                     <label for="profesional">Seleccionar profesional *</label>
                     <select id="profesional" name="profesional" required>
@@ -117,12 +115,10 @@
                         <option value="dra-ana-martinez">Dra. Ana Martínez</option>
                     </select>
                 </div>
-
                 <div class="campo-formulario">
                     <label for="fecha">Fecha preferencial</label>
                     <input type="date" id="fecha" name="fecha">
                 </div>
-
                 <div class="campo-formulario">
                     <label for="horario">Horario preferencial</label>
                     <select id="horario" name="horario">
@@ -131,27 +127,22 @@
                         <option value="tarde">Tarde (14 a 18hs)</option>
                     </select>
                 </div>
-
                 <div class="campo-formulario">
                     <label for="obra-social">Obra social (opcional)</label>
                     <input type="text" id="obra-social" name="obra-social">
                 </div>
-
                 <div class="campo-formulario">
                     <label for="comentarios">Comentarios adicionales</label>
                     <textarea id="comentarios" name="comentarios" rows="4"
                         placeholder="Contanos si tenés alguna preferencia o necesidad especial..."></textarea>
                 </div>
-
                 <button type="submit" class="btn">Solicitar turno</button>
                 <p class="nota">* Campos obligatorios. Te contactaremos para confirmar el turno.</p>
-
             </form>
         </section>
 
     </main>
 
-    <!-- ===== FOOTER ===== -->
     <footer>
         <div class="footer-contacto">
             <p>📞 Central: 011-4567-8901</p>
