@@ -12,23 +12,32 @@
 <body>
 
     <header>
-        <div class="logo">
-            <a href="../../index.html">🏥 Centro de Salud</a>
+        <div class="container-nav">
+            <div class="header-wrap">
+                <div class="logo-box">
+                    <div class="logo">
+                        <a href="../../index.html">🏥 Centro de Salud</a>
+                    </div>
+                </div>
+                <div class="nav-box">
+                    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+                    <label for="menu-toggle" class="menu-icon">☰</label>
+                    <nav>
+                        <ul>
+                            <li><a href="../../index.html">Inicio</a></li>
+                            <li><a href="../especialidades.html">Especialidades</a></li>
+                            <li><a href="../faq.html">FAQ</a></li>
+                            <li><a href="../galeria.html">Galería</a></li>
+                            <li><a href="../institucional.html">El Centro</a></li>
+                            <li><a href="../contacto.html">Contacto</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
         </div>
-        <nav>
-            <ul>
-                <li><a href="../../index.html">Inicio</a></li>
-                <li><a href="../especialidades.html">Especialidades</a></li>
-                <li><a href="../estudios.html">Resultados de Estudios</a></li>
-                <li><a href="../faq.html">FAQ</a></li>
-                <li><a href="../galeria.html">Galería</a></li>
-                <li><a href="../institucional.html">El Centro</a></li>
-                <li><a href="../contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
     </header>
 
-    <main>
+    <main class="no-banner">
 
         <section class="titulo-especialidad">
             <h1>Traumatología</h1>
@@ -40,24 +49,31 @@
             <div class="tarjetas-profesionales">
                 <div class="tarjeta-profesional">
                     <div class="foto-profesional">
-                        <img src="../../assets/img/profesionales/dr-leonardo-castro.jpg"
-                            alt="Foto del Dr. Leonardo Castro"
-                            onerror="this.src='https://placehold.co/150x150?text=Dr.+Castro'">
+                        <img src="../../assets/img/profesionales/dr-lucas-silva.jpg" alt="Foto del Dr. Lucas Silva"
+                            onerror="this.src='https://placehold.co/150x150?text=Dr.+Silva'">
                     </div>
-                    <h3>Dr. Leonardo Castro</h3>
-                    <p><strong>Especialidad:</strong> Traumatología deportiva</p>
-                    <p><strong>Matrícula:</strong> MP 99999</p>
-                    <p><strong>Horarios:</strong> Lun, Mié, Vie 10 a 15hs</p>
+                    <div class="info-profesional">
+                        <h3>Dr. Lucas Silva</h3>
+                        <p><strong>Especialidad:</strong> Traumatología y Ortopedia</p>
+                        <p><strong>Matrícula:</strong> MP 22334</p>
+                        <p><strong>Horarios:</strong> Mar, Jue 09 a 13hs</p>
+                        <a href="#" class="btn-perfil">Ver perfil</a>
+                    </div>
                 </div>
+
                 <div class="tarjeta-profesional">
                     <div class="foto-profesional">
-                        <img src="../../assets/img/profesionales/dr-marcos-vera.jpg" alt="Foto del Dr. Marcos Vera"
-                            onerror="this.src='https://placehold.co/150x150?text=Dr.+Vera'">
+                        <img src="../../assets/img/profesionales/dr-marcelo-duarte.jpg"
+                            alt="Foto del Dr. Marcelo Duarte"
+                            onerror="this.src='https://placehold.co/150x150?text=Dr.+Duarte'">
                     </div>
-                    <h3>Dr. Marcos Vera</h3>
-                    <p><strong>Especialidad:</strong> Cirugía de rodilla y cadera</p>
-                    <p><strong>Matrícula:</strong> MP 10101</p>
-                    <p><strong>Horarios:</strong> Mar, Jue 14 a 19hs</p>
+                    <div class="info-profesional">
+                        <h3>Dr. Marcelo Duarte</h3>
+                        <p><strong>Especialidad:</strong> Traumatología Deportiva</p>
+                        <p><strong>Matrícula:</strong> MP 22377</p>
+                        <p><strong>Horarios:</strong> Lun, Mié 14 a 18hs</p>
+                        <a href="#" class="btn-perfil">Ver perfil</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -93,8 +109,8 @@
                     <label for="profesional">Seleccionar profesional *</label>
                     <select id="profesional" name="profesional" required>
                         <option value="">-- Elegir profesional --</option>
-                        <option value="dr-leonardo-castro">Dr. Leonardo Castro</option>
-                        <option value="dr-marcos-vera">Dr. Marcos Vera</option>
+                        <option value="dr-lucas-silva">Dr. Lucas Silva</option>
+                        <option value="dr-marcelo-duarte">Dr. Marcelo Duarte</option>
                     </select>
                 </div>
                 <div class="campo-formulario">
