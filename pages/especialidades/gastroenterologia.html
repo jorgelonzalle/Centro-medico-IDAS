@@ -12,23 +12,32 @@
 <body>
 
     <header>
-        <div class="logo">
-            <a href="../../index.html">🏥 Centro de Salud</a>
+        <div class="container-nav">
+            <div class="header-wrap">
+                <div class="logo-box">
+                    <div class="logo">
+                        <a href="../../index.html">🏥 Centro de Salud</a>
+                    </div>
+                </div>
+                <div class="nav-box">
+                    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+                    <label for="menu-toggle" class="menu-icon">☰</label>
+                    <nav>
+                        <ul>
+                            <li><a href="../../index.html">Inicio</a></li>
+                            <li><a href="../especialidades.html">Especialidades</a></li>
+                            <li><a href="../faq.html">FAQ</a></li>
+                            <li><a href="../galeria.html">Galería</a></li>
+                            <li><a href="../institucional.html">El Centro</a></li>
+                            <li><a href="../contacto.html">Contacto</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
         </div>
-        <nav>
-            <ul>
-                <li><a href="../../index.html">Inicio</a></li>
-                <li><a href="../especialidades.html">Especialidades</a></li>
-                <li><a href="../estudios.html">Resultados de Estudios</a></li>
-                <li><a href="../faq.html">FAQ</a></li>
-                <li><a href="../galeria.html">Galería</a></li>
-                <li><a href="../institucional.html">El Centro</a></li>
-                <li><a href="../contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
     </header>
 
-    <main>
+    <main class="no-banner">
 
         <section class="titulo-especialidad">
             <h1>Gastroenterología</h1>
@@ -40,24 +49,30 @@
             <div class="tarjetas-profesionales">
                 <div class="tarjeta-profesional">
                     <div class="foto-profesional">
-                        <img src="../../assets/img/profesionales/dr-marcelo-rios.jpg" alt="Foto del Dr. Marcelo Ríos"
-                            onerror="this.src='https://placehold.co/150x150?text=Dr.+Ríos'">
+                        <img src="../../assets/img/profesionales/dr-jorge-lopez.jpg" alt="Foto del Dr. Jorge López"
+                            onerror="this.src='https://placehold.co/150x150?text=Dr.+López'">
                     </div>
-                    <h3>Dr. Marcelo Ríos</h3>
-                    <p><strong>Especialidad:</strong> Endoscopía digestiva</p>
-                    <p><strong>Matrícula:</strong> MP 18181</p>
-                    <p><strong>Horarios:</strong> Lun, Mié 9 a 15hs</p>
+                    <div class="info-profesional">
+                        <h3>Dr. Jorge López</h3>
+                        <p><strong>Especialidad:</strong> Gastroenterología</p>
+                        <p><strong>Matrícula:</strong> MP 78901</p>
+                        <p><strong>Horarios:</strong> Mié, Vie 13 a 17hs</p>
+                        <a href="#" class="btn-perfil">Ver perfil</a>
+                    </div>
                 </div>
+
                 <div class="tarjeta-profesional">
                     <div class="foto-profesional">
-                        <img src="../../assets/img/profesionales/dra-elena-cabral.jpg"
-                            alt="Foto de la Dra. Elena Cabral"
-                            onerror="this.src='https://placehold.co/150x150?text=Dra.+Cabral'">
+                        <img src="../../assets/img/profesionales/dra-monica-rios.jpg" alt="Foto de la Dra. Mónica Ríos"
+                            onerror="this.src='https://placehold.co/150x150?text=Dra.+Ríos'">
                     </div>
-                    <h3>Dra. Elena Cabral</h3>
-                    <p><strong>Especialidad:</strong> Hepatología</p>
-                    <p><strong>Matrícula:</strong> MP 19191</p>
-                    <p><strong>Horarios:</strong> Mar, Jue, Vie 13 a 18hs</p>
+                    <div class="info-profesional">
+                        <h3>Dra. Mónica Ríos</h3>
+                        <p><strong>Especialidad:</strong> Endoscopía Digestiva</p>
+                        <p><strong>Matrícula:</strong> MP 78955</p>
+                        <p><strong>Horarios:</strong> Lun, Mar 08 a 12hs</p>
+                        <a href="#" class="btn-perfil">Ver perfil</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -93,8 +108,8 @@
                     <label for="profesional">Seleccionar profesional *</label>
                     <select id="profesional" name="profesional" required>
                         <option value="">-- Elegir profesional --</option>
-                        <option value="dr-marcelo-rios">Dr. Marcelo Ríos</option>
-                        <option value="dra-elena-cabral">Dra. Elena Cabral</option>
+                        <option value="dr-jorge-lopez">Dr. Jorge López</option>
+                        <option value="dra-monica-rios">Dra. Mónica Ríos</option>
                     </select>
                 </div>
                 <div class="campo-formulario">
@@ -105,8 +120,8 @@
                     <label for="horario">Horario preferencial</label>
                     <select id="horario" name="horario">
                         <option value="">-- Elegir horario --</option>
-                        <option value="manana">Mañana (9 a 15hs)</option>
-                        <option value="tarde">Tarde (13 a 18hs)</option>
+                        <option value="manana">Mañana (8 a 12hs)</option>
+                        <option value="tarde">Tarde (13 a 17hs)</option>
                     </select>
                 </div>
                 <div class="campo-formulario">
