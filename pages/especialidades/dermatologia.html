@@ -12,23 +12,32 @@
 <body>
 
     <header>
-        <div class="logo">
-            <a href="../../index.html">🏥 Centro de Salud</a>
+        <div class="container-nav">
+            <div class="header-wrap">
+                <div class="logo-box">
+                    <div class="logo">
+                        <a href="../../index.html">🏥 Centro de Salud</a>
+                    </div>
+                </div>
+                <div class="nav-box">
+                    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+                    <label for="menu-toggle" class="menu-icon">☰</label>
+                    <nav>
+                        <ul>
+                            <li><a href="../../index.html">Inicio</a></li>
+                            <li><a href="../especialidades.html">Especialidades</a></li>
+                            <li><a href="../faq.html">FAQ</a></li>
+                            <li><a href="../galeria.html">Galería</a></li>
+                            <li><a href="../institucional.html">El Centro</a></li>
+                            <li><a href="../contacto.html">Contacto</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
         </div>
-        <nav>
-            <ul>
-                <li><a href="../../index.html">Inicio</a></li>
-                <li><a href="../especialidades.html">Especialidades</a></li>
-                <li><a href="../estudios.html">Resultados de Estudios</a></li>
-                <li><a href="../faq.html">FAQ</a></li>
-                <li><a href="../galeria.html">Galería</a></li>
-                <li><a href="../institucional.html">El Centro</a></li>
-                <li><a href="../contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
     </header>
 
-    <main>
+    <main class="no-banner">
 
         <section class="titulo-especialidad">
             <h1>Dermatología</h1>
@@ -40,24 +49,32 @@
             <div class="tarjetas-profesionales">
                 <div class="tarjeta-profesional">
                     <div class="foto-profesional">
-                        <img src="../../assets/img/profesionales/dra-clara-mendez.jpg"
-                            alt="Foto de la Dra. Clara Méndez"
-                            onerror="this.src='https://placehold.co/150x150?text=Dra.+Méndez'">
+                        <img src="../../assets/img/profesionales/dra-elena-fernandez.jpg"
+                            alt="Foto de la Dra. Elena Fernández"
+                            onerror="this.src='https://placehold.co/150x150?text=Dra.+Fernández'">
                     </div>
-                    <h3>Dra. Clara Méndez</h3>
-                    <p><strong>Especialidad:</strong> Dermatología clínica</p>
-                    <p><strong>Matrícula:</strong> MP 14141</p>
-                    <p><strong>Horarios:</strong> Lun, Mié, Vie 9 a 14hs</p>
+                    <div class="info-profesional">
+                        <h3>Dra. Elena Fernández</h3>
+                        <p><strong>Especialidad:</strong> Dermatología General</p>
+                        <p><strong>Matrícula:</strong> MP 45678</p>
+                        <p><strong>Horarios:</strong> Mar, Jue 16 a 20hs</p>
+                        <a href="#" class="btn-perfil">Ver perfil</a>
+                    </div>
                 </div>
+
                 <div class="tarjeta-profesional">
                     <div class="foto-profesional">
-                        <img src="../../assets/img/profesionales/dr-emanuel-rossi.jpg" alt="Foto del Dr. Emanuel Rossi"
-                            onerror="this.src='https://placehold.co/150x150?text=Dr.+Rossi'">
+                        <img src="../../assets/img/profesionales/dr-federico-vidal.jpg"
+                            alt="Foto del Dr. Federico Vidal"
+                            onerror="this.src='https://placehold.co/150x150?text=Dr.+Vidal'">
                     </div>
-                    <h3>Dr. Emanuel Rossi</h3>
-                    <p><strong>Especialidad:</strong> Dermatología oncológica</p>
-                    <p><strong>Matrícula:</strong> MP 15151</p>
-                    <p><strong>Horarios:</strong> Mar, Jue 14 a 19hs</p>
+                    <div class="info-profesional">
+                        <h3>Dr. Federico Vidal</h3>
+                        <p><strong>Especialidad:</strong> Dermatología Estética</p>
+                        <p><strong>Matrícula:</strong> MP 45611</p>
+                        <p><strong>Horarios:</strong> Lun, Mié 09 a 14hs</p>
+                        <a href="#" class="btn-perfil">Ver perfil</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -93,8 +110,8 @@
                     <label for="profesional">Seleccionar profesional *</label>
                     <select id="profesional" name="profesional" required>
                         <option value="">-- Elegir profesional --</option>
-                        <option value="dra-clara-mendez">Dra. Clara Méndez</option>
-                        <option value="dr-emanuel-rossi">Dr. Emanuel Rossi</option>
+                        <option value="dra-elena-fernandez">Dra. Elena Fernández</option>
+                        <option value="dr-federico-vidal">Dr. Federico Vidal</option>
                     </select>
                 </div>
                 <div class="campo-formulario">
