@@ -12,23 +12,32 @@
 <body>
 
     <header>
-        <div class="logo">
-            <a href="../../index.html">🏥 Centro de Salud</a>
+        <div class="container-nav">
+            <div class="header-wrap">
+                <div class="logo-box">
+                    <div class="logo">
+                        <a href="../../index.html">🏥 Centro de Salud</a>
+                    </div>
+                </div>
+                <div class="nav-box">
+                    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+                    <label for="menu-toggle" class="menu-icon">☰</label>
+                    <nav>
+                        <ul>
+                            <li><a href="../../index.html">Inicio</a></li>
+                            <li><a href="../especialidades.html">Especialidades</a></li>
+                            <li><a href="../faq.html">FAQ</a></li>
+                            <li><a href="../galeria.html">Galería</a></li>
+                            <li><a href="../institucional.html">El Centro</a></li>
+                            <li><a href="../contacto.html">Contacto</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
         </div>
-        <nav>
-            <ul>
-                <li><a href="../../index.html">Inicio</a></li>
-                <li><a href="../especialidades.html">Especialidades</a></li>
-                <li><a href="../estudios.html">Resultados de Estudios</a></li>
-                <li><a href="../faq.html">FAQ</a></li>
-                <li><a href="../galeria.html">Galería</a></li>
-                <li><a href="../institucional.html">El Centro</a></li>
-                <li><a href="../contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
     </header>
 
-    <main>
+    <main class="no-banner">
 
         <section class="titulo-especialidad">
             <h1>Ginecología y Obstetricia</h1>
@@ -40,24 +49,31 @@
             <div class="tarjetas-profesionales">
                 <div class="tarjeta-profesional">
                     <div class="foto-profesional">
-                        <img src="../../assets/img/profesionales/dra-marina-torres.jpg"
-                            alt="Foto de la Dra. Marina Torres"
-                            onerror="this.src='https://placehold.co/150x150?text=Dra.+Torres'">
+                        <img src="../../assets/img/profesionales/dra-laura-benitez.jpg"
+                            alt="Foto de la Dra. Laura Benítez"
+                            onerror="this.src='https://placehold.co/150x150?text=Dra.+Benítez'">
                     </div>
-                    <h3>Dra. Marina Torres</h3>
-                    <p><strong>Especialidad:</strong> Ginecología general</p>
-                    <p><strong>Matrícula:</strong> MP 16161</p>
-                    <p><strong>Horarios:</strong> Lun, Mié, Vie 8 a 13hs</p>
+                    <div class="info-profesional">
+                        <h3>Dra. Laura Benítez</h3>
+                        <p><strong>Especialidad:</strong> Ginecología y Obstetricia</p>
+                        <p><strong>Matrícula:</strong> MP 89012</p>
+                        <p><strong>Horarios:</strong> Lun, Jue 08 a 13hs</p>
+                        <a href="#" class="btn-perfil">Ver perfil</a>
+                    </div>
                 </div>
+
                 <div class="tarjeta-profesional">
                     <div class="foto-profesional">
-                        <img src="../../assets/img/profesionales/dr-pablo-suarez.jpg" alt="Foto del Dr. Pablo Suárez"
-                            onerror="this.src='https://placehold.co/150x150?text=Dr.+Suárez'">
+                        <img src="../../assets/img/profesionales/dr-sergio-mendez.jpg" alt="Foto del Dr. Sergio Méndez"
+                            onerror="this.src='https://placehold.co/150x150?text=Dr.+Méndez'">
                     </div>
-                    <h3>Dr. Pablo Suárez</h3>
-                    <p><strong>Especialidad:</strong> Obstetricia de alto riesgo</p>
-                    <p><strong>Matrícula:</strong> MP 17171</p>
-                    <p><strong>Horarios:</strong> Mar, Jue 13 a 18hs</p>
+                    <div class="info-profesional">
+                        <h3>Dr. Sergio Méndez</h3>
+                        <p><strong>Especialidad:</strong> Ginecología General</p>
+                        <p><strong>Matrícula:</strong> MP 89066</p>
+                        <p><strong>Horarios:</strong> Mié, Vie 14 a 19hs</p>
+                        <a href="#" class="btn-perfil">Ver perfil</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -93,8 +109,8 @@
                     <label for="profesional">Seleccionar profesional *</label>
                     <select id="profesional" name="profesional" required>
                         <option value="">-- Elegir profesional --</option>
-                        <option value="dra-marina-torres">Dra. Marina Torres</option>
-                        <option value="dr-pablo-suarez">Dr. Pablo Suárez</option>
+                        <option value="dra-laura-benitez">Dra. Laura Benítez</option>
+                        <option value="dr-sergio-mendez">Dr. Sergio Méndez</option>
                     </select>
                 </div>
                 <div class="campo-formulario">
