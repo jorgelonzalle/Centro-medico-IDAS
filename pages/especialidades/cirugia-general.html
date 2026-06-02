@@ -12,23 +12,32 @@
 <body>
 
     <header>
-        <div class="logo">
-            <a href="../../index.html">🏥 Centro de Salud</a>
+        <div class="container-nav">
+            <div class="header-wrap">
+                <div class="logo-box">
+                    <div class="logo">
+                        <a href="../../index.html">🏥 Centro de Salud</a>
+                    </div>
+                </div>
+                <div class="nav-box">
+                    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+                    <label for="menu-toggle" class="menu-icon">☰</label>
+                    <nav>
+                        <ul>
+                            <li><a href="../../index.html">Inicio</a></li>
+                            <li><a href="../especialidades.html">Especialidades</a></li>
+                            <li><a href="../faq.html">FAQ</a></li>
+                            <li><a href="../galeria.html">Galería</a></li>
+                            <li><a href="../institucional.html">El Centro</a></li>
+                            <li><a href="../contacto.html">Contacto</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
         </div>
-        <nav>
-            <ul>
-                <li><a href="../../index.html">Inicio</a></li>
-                <li><a href="../especialidades.html">Especialidades</a></li>
-                <li><a href="../estudios.html">Resultados de Estudios</a></li>
-                <li><a href="../faq.html">FAQ</a></li>
-                <li><a href="../galeria.html">Galería</a></li>
-                <li><a href="../institucional.html">El Centro</a></li>
-                <li><a href="../contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
     </header>
 
-    <main>
+    <main class="no-banner">
 
         <section class="titulo-especialidad">
             <h1>Cirugía General</h1>
@@ -40,25 +49,32 @@
             <div class="tarjetas-profesionales">
                 <div class="tarjeta-profesional">
                     <div class="foto-profesional">
-                        <img src="../../assets/img/profesionales/dr-roberto-ferrari.jpg"
-                            alt="Foto del Dr. Roberto Ferrari"
-                            onerror="this.src='https://placehold.co/150x150?text=Dr.+Ferrari'">
+                        <img src="../../assets/img/profesionales/dr-mariano-rodriguez.jpg"
+                            alt="Foto del Dr. Mariano Rodríguez"
+                            onerror="this.src='https://placehold.co/150x150?text=Dr.+Rodríguez'">
                     </div>
-                    <h3>Dr. Roberto Ferrari</h3>
-                    <p><strong>Especialidad:</strong> Cirugía laparoscópica</p>
-                    <p><strong>Matrícula:</strong> MP 20202</p>
-                    <p><strong>Horarios:</strong> Lun, Mié 10 a 14hs</p>
+                    <div class="info-profesional">
+                        <h3>Dr. Mariano Rodríguez</h3>
+                        <p><strong>Especialidad:</strong> Cirugía General</p>
+                        <p><strong>Matrícula:</strong> MP 23412</p>
+                        <p><strong>Horarios:</strong> Lun, Mié 15 a 19hs</p>
+                        <a href="#" class="btn-perfil">Ver perfil</a>
+                    </div>
                 </div>
+
                 <div class="tarjeta-profesional">
                     <div class="foto-profesional">
-                        <img src="../../assets/img/profesionales/dra-liliana-aguero.jpg"
-                            alt="Foto de la Dra. Liliana Agüero"
-                            onerror="this.src='https://placehold.co/150x150?text=Dra.+Agüero'">
+                        <img src="../../assets/img/profesionales/dra-patricia-sosa.jpg"
+                            alt="Foto de la Dra. Patricia Sosa"
+                            onerror="this.src='https://placehold.co/150x150?text=Dra.+Sosa'">
                     </div>
-                    <h3>Dra. Liliana Agüero</h3>
-                    <p><strong>Especialidad:</strong> Cirugía de pared abdominal</p>
-                    <p><strong>Matrícula:</strong> MP 21212</p>
-                    <p><strong>Horarios:</strong> Mar, Jue 14 a 18hs</p>
+                    <div class="info-profesional">
+                        <h3>Dra. Patricia Sosa</h3>
+                        <p><strong>Especialidad:</strong> Cirugía Laparoscópica</p>
+                        <p><strong>Matrícula:</strong> MP 23488</p>
+                        <p><strong>Horarios:</strong> Mar, Jue 13 a 17hs</p>
+                        <a href="#" class="btn-perfil">Ver perfil</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -94,8 +110,8 @@
                     <label for="profesional">Seleccionar profesional *</label>
                     <select id="profesional" name="profesional" required>
                         <option value="">-- Elegir profesional --</option>
-                        <option value="dr-roberto-ferrari">Dr. Roberto Ferrari</option>
-                        <option value="dra-liliana-aguero">Dra. Liliana Agüero</option>
+                        <option value="dr-mariano-rodriguez">Dr. Mariano Rodríguez</option>
+                        <option value="dra-patricia-sosa">Dra. Patricia Sosa</option>
                     </select>
                 </div>
                 <div class="campo-formulario">
