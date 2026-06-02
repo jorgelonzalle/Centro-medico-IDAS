@@ -12,23 +12,32 @@
 <body>
 
     <header>
-        <div class="logo">
-            <a href="../../index.html">🏥 Centro de Salud</a>
+        <div class="container-nav">
+            <div class="header-wrap">
+                <div class="logo-box">
+                    <div class="logo">
+                        <a href="../../index.html">🏥 Centro de Salud</a>
+                    </div>
+                </div>
+                <div class="nav-box">
+                    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+                    <label for="menu-toggle" class="menu-icon">☰</label>
+                    <nav>
+                        <ul>
+                            <li><a href="../../index.html">Inicio</a></li>
+                            <li><a href="../especialidades.html">Especialidades</a></li>
+                            <li><a href="../faq.html">FAQ</a></li>
+                            <li><a href="../galeria.html">Galería</a></li>
+                            <li><a href="../institucional.html">El Centro</a></li>
+                            <li><a href="../contacto.html">Contacto</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
         </div>
-        <nav>
-            <ul>
-                <li><a href="../../index.html">Inicio</a></li>
-                <li><a href="../especialidades.html">Especialidades</a></li>
-                <li><a href="../estudios.html">Resultados de Estudios</a></li>
-                <li><a href="../faq.html">FAQ</a></li>
-                <li><a href="../galeria.html">Galería</a></li>
-                <li><a href="../institucional.html">El Centro</a></li>
-                <li><a href="../contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
     </header>
 
-    <main>
+    <main class="no-banner">
 
         <section class="titulo-especialidad">
             <h1>Análisis Clínicos</h1>
@@ -40,25 +49,30 @@
             <div class="tarjetas-profesionales">
                 <div class="tarjeta-profesional">
                     <div class="foto-profesional">
-                        <img src="../../assets/img/profesionales/bioq-javier-medina.jpg"
-                            alt="Foto del Bioq. Javier Medina"
-                            onerror="this.src='https://placehold.co/150x150?text=Bioq.+Medina'">
+                        <img src="../../assets/img/profesionales/dr-carlos-gomez.jpg" alt="Foto del Dr. Carlos Gómez"
+                            onerror="this.src='https://placehold.co/150x150?text=Dr.+Gómez'">
                     </div>
-                    <h3>Bioq. Javier Medina</h3>
-                    <p><strong>Especialidad:</strong> Bioquímica clínica</p>
-                    <p><strong>Matrícula:</strong> MQ 22222</p>
-                    <p><strong>Horarios:</strong> Lun a Vie 7 a 13hs</p>
+                    <div class="info-profesional">
+                        <h3>Dr. Carlos Gómez</h3>
+                        <p><strong>Especialidad:</strong> Análisis Clínicos</p>
+                        <p><strong>Matrícula:</strong> MP 34567</p>
+                        <p><strong>Horarios:</strong> Lun a Vie 7 a 12hs</p>
+                        <a href="#" class="btn-perfil">Ver perfil</a>
+                    </div>
                 </div>
+
                 <div class="tarjeta-profesional">
                     <div class="foto-profesional">
-                        <img src="../../assets/img/profesionales/bioq-silvia-rojas.jpg"
-                            alt="Foto de la Bioq. Silvia Rojas"
-                            onerror="this.src='https://placehold.co/150x150?text=Bioq.+Rojas'">
+                        <img src="../../assets/img/profesionales/dra-julia-ortiz.jpg" alt="Foto de la Dra. Julia Ortiz"
+                            onerror="this.src='https://placehold.co/150x150?text=Dra.+Ortiz'">
                     </div>
-                    <h3>Bioq. Silvia Rojas</h3>
-                    <p><strong>Especialidad:</strong> Microbiología</p>
-                    <p><strong>Matrícula:</strong> MQ 23232</p>
-                    <p><strong>Horarios:</strong> Lun a Vie 13 a 19hs</p>
+                    <div class="info-profesional">
+                        <h3>Dra. Julia Ortiz</h3>
+                        <p><strong>Especialidad:</strong> Bioquímica / Análisis Clínicos</p>
+                        <p><strong>Matrícula:</strong> MP 34599</p>
+                        <p><strong>Horarios:</strong> Lun a Sab 8 a 11hs</p>
+                        <a href="#" class="btn-perfil">Ver perfil</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -95,8 +109,8 @@
                     <label for="profesional">Seleccionar profesional *</label>
                     <select id="profesional" name="profesional" required>
                         <option value="">-- Elegir profesional --</option>
-                        <option value="bioq-javier-medina">Bioq. Javier Medina</option>
-                        <option value="bioq-silvia-rojas">Bioq. Silvia Rojas</option>
+                        <option value="dr-carlos-gomez">Dr. Carlos Gómez</option>
+                        <option value="dra-julia-ortiz">Dra. Julia Ortiz</option>
                     </select>
                 </div>
                 <div class="campo-formulario">
