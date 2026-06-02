@@ -12,23 +12,32 @@
 <body>
 
     <header>
-        <div class="logo">
-            <a href="../../index.html">🏥 Centro de Salud</a>
+        <div class="container-nav">
+            <div class="header-wrap">
+                <div class="logo-box">
+                    <div class="logo">
+                        <a href="../../index.html">🏥 Centro de Salud</a>
+                    </div>
+                </div>
+                <div class="nav-box">
+                    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+                    <label for="menu-toggle" class="menu-icon">☰</label>
+                    <nav>
+                        <ul>
+                            <li><a href="../../index.html">Inicio</a></li>
+                            <li><a href="../especialidades.html">Especialidades</a></li>
+                            <li><a href="../faq.html">FAQ</a></li>
+                            <li><a href="../galeria.html">Galería</a></li>
+                            <li><a href="../institucional.html">El Centro</a></li>
+                            <li><a href="../contacto.html">Contacto</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
         </div>
-        <nav>
-            <ul>
-                <li><a href="../../index.html">Inicio</a></li>
-                <li><a href="../especialidades.html">Especialidades</a></li>
-                <li><a href="../estudios.html">Resultados de Estudios</a></li>
-                <li><a href="../faq.html">FAQ</a></li>
-                <li><a href="../galeria.html">Galería</a></li>
-                <li><a href="../institucional.html">El Centro</a></li>
-                <li><a href="../contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
     </header>
 
-    <main>
+    <main class="no-banner">
 
         <section class="titulo-especialidad">
             <h1>Neurología</h1>
@@ -40,37 +49,33 @@
             <div class="tarjetas-profesionales">
                 <div class="tarjeta-profesional">
                     <div class="foto-profesional">
-                        <img src="../../assets/img/profesionales/dr-roberto-garcia.jpg"
-                            alt="Foto del Dr. Roberto García"
-                            onerror="this.src='https://placehold.co/150x150?text=Dr.+García'">
+                        <img src="../../assets/img/profesionales/dr-andres-diaz.jpg" alt="Foto del Dr. Andrés Díaz"
+                            onerror="this.src='https://placehold.co/150x150?text=Dr.+Díaz'">
                     </div>
-
                     <div class="info-profesional">
-                        <h3>Dr. Roberto García</h3>
-                        <p><strong>Especialidad:</strong> Cardiología clínica</p>
-                        <p><strong>Matrícula:</strong> MP 12345</p>
-                        <p><strong>Horarios:</strong> Lun, Mié, Vie 9 a 13hs</p>
-
+                        <h3>Dr. Andrés Díaz</h3>
+                        <p><strong>Especialidad:</strong> Neurología Adultos</p>
+                        <p><strong>Matrícula:</strong> MP 44556</p>
+                        <p><strong>Horarios:</strong> Mar 09 a 15hs</p>
                         <a href="#" class="btn-perfil">Ver perfil</a>
                     </div>
                 </div>
 
                 <div class="tarjeta-profesional">
                     <div class="foto-profesional">
-                        <img src="../../assets/img/profesionales/dra-ana-martinez.jpg"
-                            alt="Foto de la Dra. Ana Martínez"
-                            onerror="this.src='https://placehold.co/150x150?text=Dra.+Martínez'">
+                        <img src="../../assets/img/profesionales/dra-silvia-marquez.jpg"
+                            alt="Foto de la Dra. Silvia Márquez"
+                            onerror="this.src='https://placehold.co/150x150?text=Dra.+Márquez'">
                     </div>
-
                     <div class="info-profesional">
-                        <h3>Dra. Ana Martínez</h3>
-                        <p><strong>Especialidad:</strong> Cardiología infantil</p>
-                        <p><strong>Matrícula:</strong> MP 67890</p>
-                        <p><strong>Horarios:</strong> Mar, Jue 14 a 18hs</p>
-
+                        <h3>Dra. Silvia Márquez</h3>
+                        <p><strong>Especialidad:</strong> Neurología Cognitiva</p>
+                        <p><strong>Matrícula:</strong> MP 44599</p>
+                        <p><strong>Horarios:</strong> Jue 13 a 18hs</p>
                         <a href="#" class="btn-perfil">Ver perfil</a>
                     </div>
                 </div>
+            </div>
         </section>
 
         <section class="info-especialidad">
@@ -104,8 +109,8 @@
                     <label for="profesional">Seleccionar profesional *</label>
                     <select id="profesional" name="profesional" required>
                         <option value="">-- Elegir profesional --</option>
-                        <option value="dr-martin-sanchez">Dr. Martín Sánchez</option>
-                        <option value="dra-carolina-diaz">Dra. Carolina Díaz</option>
+                        <option value="dr-andres-diaz">Dr. Andrés Díaz</option>
+                        <option value="dra-silvia-marquez">Dra. Silvia Márquez</option>
                     </select>
                 </div>
                 <div class="campo-formulario">
