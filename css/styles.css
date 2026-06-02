@@ -1,3 +1,6 @@
+/* ==========================================================================
+   1. VARIABLES GLOBALES (Médica Muted - Confianza y limpieza)
+   ========================================================================== */
 :root {
     /* Paleta Médica Muted - Genera confianza, limpieza y mitiga la fatiga visual */
     --primary: #1e3a8a;
@@ -45,6 +48,29 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
+/* Focus visible para accesibilidad (HU-14) */
+:focus-visible {
+    outline: 3px solid var(--primary-light);
+    outline-offset: 3px;
+    border-radius: 4px;
+}
+
+/* Skip to main content - accesibilidad */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--primary);
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    z-index: 999;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
 /* ==========================================================================
    3. HEADER & NAVEGACIÓN (Diseño de Interacción Limpio)
    ========================================================================== */
@@ -83,6 +109,11 @@ header .container-nav {
     color: var(--primary);
     text-decoration: none;
     letter-spacing: -0.3px;
+    transition: var(--transition);
+}
+
+.logo a:hover {
+    color: var(--primary-light);
 }
 
 .nav-box {
@@ -112,26 +143,61 @@ nav ul li a {
     position: relative;
 }
 
-nav ul li a:hover,
-nav ul li a[href="especialidades.html"] {
+nav ul li a:hover {
     color: var(--primary);
-    font-weight: 600;
-}
-
-/* Indicador visual de la sección activa (UX Cue) */
-nav ul li a[href="especialidades.html"]::after {
-    content: '';
-    position: absolute;
-    bottom: -4px;
-    left: 4px;
-    right: 4px;
-    height: 3px;
-    background-color: var(--secondary);
-    border-radius: 2px;
 }
 
 /* ==========================================================================
-   4. CONTENIDO PRINCIPAL (Jerarquía Visual & Espaciado)
+   4. BOTONES GLOBALES
+   ========================================================================== */
+.btn {
+    display: inline-block;
+    background-color: var(--secondary);
+    color: white;
+    text-decoration: none;
+    padding: 12px 28px;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    font-size: 14px;
+    transition: var(--transition);
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: #0a7a70;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+/* Botón primario (para acciones principales) */
+.btn-primary {
+    background-color: var(--primary);
+}
+
+.btn-primary:hover {
+    background-color: #15306e;
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 2px solid var(--secondary);
+    color: var(--secondary);
+}
+
+.btn-outline:hover {
+    background-color: var(--secondary);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   5. CONTENIDO PRINCIPAL (Jerarquía Visual & Espaciado)
    ========================================================================== */
 main {
     max-width: 1200px;
@@ -139,7 +205,260 @@ main {
     padding: 0 24px;
 }
 
-/* Encabezado de Sección */
+/* ==========================================================================
+   6. HERO BANNER CON IMAGEN DEGRADADA (Página de inicio)
+   ========================================================================== */
+.hero-banner {
+    position: relative;
+    /* Imagen médica genérica gratuita (Unsplash - equipo médico) */
+    background-image: linear-gradient(135deg, rgba(30, 58, 138, 0.88) 0%, rgba(10, 26, 74, 0.94) 100%),
+        url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=2070&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center 40%;
+    background-repeat: no-repeat;
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 60px;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+
+/* Patrón de puntos sutiles encima de la imagen */
+.hero-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+    background-size: 35px 35px;
+    pointer-events: none;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 60px 40px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 16px;
+    letter-spacing: -0.5px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.hero-content p {
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.92);
+    margin-bottom: 32px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+/* ==========================================================================
+   7. PÁGINA DE INICIO - URGENCIAS FLOTANTE (HU-01, HU-02)
+   ========================================================================== */
+.urgencias-card {
+    background-color: var(--bg-card);
+    border-radius: 20px;
+    padding: 32px 40px;
+    margin: -80px auto 48px auto;
+    max-width: 600px;
+    text-align: center;
+    box-shadow: var(--shadow-hover);
+    border: 1px solid var(--border-color);
+    position: relative;
+    z-index: 3;
+}
+
+.urgencias-card .badge-urgencias {
+    display: inline-block;
+    background-color: #dc2626;
+    color: white;
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    letter-spacing: 0.5px;
+}
+
+.urgencias-card h2 {
+    font-size: 28px;
+    color: var(--text-main);
+    margin-bottom: 12px;
+}
+
+.urgencias-card .telefono-urgencias {
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--primary);
+    margin: 16px 0;
+}
+
+.urgencias-card .telefono-urgencias a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.urgencias-card .telefono-urgencias a:hover {
+    text-decoration: underline;
+}
+
+.urgencias-card .btn-group {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    margin-top: 24px;
+    flex-wrap: wrap;
+}
+
+/* Títulos de sección generales */
+.section-title {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.section-title h2 {
+    font-size: 32px;
+    color: var(--primary);
+    font-weight: 700;
+    margin-bottom: 12px;
+    display: inline-block;
+    position: relative;
+}
+
+.section-title h2::after {
+    content: '';
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background-color: var(--secondary);
+    border-radius: 2px;
+}
+
+.section-title p {
+    color: var(--text-muted);
+    font-size: 18px;
+    max-width: 600px;
+    margin: 20px auto 0 auto;
+}
+
+/* Cards de servicios mejoradas */
+.servicios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    margin-bottom: 60px;
+}
+
+.servicio-card {
+    background-color: var(--bg-card);
+    padding: 28px 24px;
+    border-radius: var(--radius-lg);
+    text-align: center;
+    transition: var(--transition);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+}
+
+.servicio-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--primary-light);
+}
+
+.servicio-icon {
+    font-size: 48px;
+    margin-bottom: 16px;
+    display: inline-block;
+}
+
+.servicio-card h3 {
+    font-size: 20px;
+    color: var(--primary);
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.servicio-card p {
+    color: var(--text-muted);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Acceso rápido mejorado */
+.acceso-rapido-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    margin-bottom: 60px;
+}
+
+.acceso-card {
+    background-color: var(--bg-card);
+    padding: 32px 24px;
+    border-radius: var(--radius-lg);
+    text-align: center;
+    transition: var(--transition);
+    border: 1px solid var(--border-color);
+    text-decoration: none;
+    display: block;
+}
+
+.acceso-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--secondary);
+}
+
+.acceso-card .acceso-icon {
+    font-size: 52px;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.acceso-card h3 {
+    font-size: 22px;
+    color: var(--primary);
+    margin-bottom: 12px;
+}
+
+.acceso-card p {
+    color: var(--text-muted);
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.acceso-card .btn-small {
+    display: inline-block;
+    background-color: var(--secondary);
+    color: white;
+    padding: 10px 24px;
+    border-radius: var(--radius-md);
+    font-size: 14px;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.acceso-card:hover .btn-small {
+    background-color: var(--primary);
+}
+
+/* ==========================================================================
+   8. ESPECIALIDADES (especialidades.html) - CUADRÍCULA
+   ========================================================================== */
 .titulo-especialidades {
     text-align: center;
     margin-bottom: 48px;
@@ -160,19 +479,16 @@ main {
     margin: 0 auto;
 }
 
-/* Cuadrícula de Especialidades (Affordance & Click Target Optimizado) */
 .cuadricula-especialidades {
     display: block;
     text-align: center;
     font-size: 0;
-    /* Remueve espacios vacíos colaterales */
 }
 
 .especialidad-card {
     display: inline-block;
     font-size: 16px;
     width: calc(25% - 24px);
-    /* Distribución simétrica de 4 columnas */
     margin: 12px;
     background-color: var(--bg-card);
     border: 1px solid var(--border-color);
@@ -191,7 +507,6 @@ main {
     border-color: var(--primary-light);
 }
 
-/* Micro-interacciones dentro de las Tarjetas */
 .especialidad-card .icono {
     font-size: 36px;
     margin-bottom: 16px;
@@ -212,11 +527,808 @@ main {
 }
 
 /* ==========================================================================
-   5. FOOTER (Información de Contacto Accesible)
+   9. PÁGINAS DE ESPECIALIDAD (cardiologia.html, etc) - HU-03, HU-06, HU-09
+   ========================================================================== */
+
+/* Título de especialidad */
+.titulo-especialidad {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.titulo-especialidad h1 {
+    font-size: 36px;
+    color: var(--primary);
+    margin-bottom: 16px;
+}
+
+.titulo-especialidad p {
+    font-size: 18px;
+    color: var(--text-muted);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Sección profesionales */
+.profesionales {
+    margin-bottom: 48px;
+}
+
+.profesionales h2 {
+    font-size: 28px;
+    color: var(--primary);
+    margin-bottom: 24px;
+    border-left: 4px solid var(--secondary);
+    padding-left: 16px;
+}
+
+.tarjetas-profesionales {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* Contenedor de tarjetas - grid de 2 columnas */
+.tarjetas-profesionales {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-bottom: 48px;
+}
+
+/* Cada tarjeta individual */
+.tarjeta-profesional {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: var(--bg-card);
+    border-radius: 20px;
+    padding: 28px 24px;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
+}
+
+.tarjeta-profesional:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-hover);
+}
+
+/* Foto del médico */
+.foto-profesional {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 20px;
+    background-color: #e2e8f0;
+}
+
+.foto-profesional img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+}
+
+/* Información del médico */
+.info-profesional {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.tarjeta-profesional h3 {
+    margin: 0 0 8px 0;
+    color: var(--primary);
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.tarjeta-profesional p {
+    margin: 6px 0;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.tarjeta-profesional p strong {
+    color: var(--primary);
+}
+
+/* Botón de perfil - más compacto */
+.btn-perfil {
+    display: inline-block;
+    text-align: center;
+    margin-top: 16px;
+    padding: 10px 24px;
+    background-color: var(--primary);
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 40px;
+    transition: var(--transition);
+    width: auto;
+    min-width: 120px;
+}
+
+.btn-perfil:hover {
+    background-color: #15306e;
+    transform: translateY(-2px);
+}
+
+/* Responsive: en móviles, una sola columna */
+@media (max-width: 768px) {
+    .tarjetas-profesionales {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+.btn-perfil:active {
+    transform: scale(0.98);
+}
+
+/* Información de especialidad */
+.info-especialidad {
+    background-color: var(--bg-card);
+    padding: 32px;
+    border-radius: var(--radius-lg);
+    margin-bottom: 48px;
+    border: 1px solid var(--border-color);
+}
+
+.info-especialidad h2 {
+    font-size: 28px;
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+.info-especialidad ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.info-especialidad ul li {
+    padding: 8px 0 8px 24px;
+    position: relative;
+}
+
+.info-especialidad ul li::before {
+    content: "✓";
+    color: var(--secondary);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.info-especialidad p {
+    color: var(--text-muted);
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border-color);
+}
+
+/* Formulario de turno */
+.formulario-turno {
+    background-color: var(--bg-card);
+    padding: 32px;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-color);
+}
+
+.formulario-turno h2 {
+    font-size: 28px;
+    color: var(--primary);
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.campo-formulario {
+    margin-bottom: 20px;
+}
+
+.campo-formulario label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+.campo-formulario input,
+.campo-formulario select,
+.campo-formulario textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    font-size: 16px;
+    font-family: inherit;
+    transition: var(--transition);
+    background-color: var(--bg-card);
+}
+
+.campo-formulario input:focus,
+.campo-formulario select:focus,
+.campo-formulario textarea:focus {
+    outline: none;
+    border-color: var(--primary-light);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.campo-formulario.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.campo-formulario.checkbox input {
+    width: auto;
+}
+
+.campo-formulario.checkbox label {
+    margin-bottom: 0;
+}
+
+.formulario-turno button[type="submit"] {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.nota {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-top: 16px;
+    text-align: center;
+}
+
+/* ==========================================================================
+   10. ESTUDIOS / RESULTADOS (estudios.html) - HU-07
+   ========================================================================== */
+.titulo-estudios {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.titulo-estudios h1 {
+    font-size: 36px;
+    color: var(--primary);
+    margin-bottom: 16px;
+}
+
+.formulario-consulta-estudios {
+    background-color: var(--bg-card);
+    padding: 32px;
+    border-radius: var(--radius-lg);
+    margin-bottom: 40px;
+    border: 1px solid var(--border-color);
+}
+
+.formulario-consulta-estudios h2 {
+    font-size: 24px;
+    color: var(--primary);
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.info-estudios {
+    margin-bottom: 40px;
+}
+
+.info-estudios h2 {
+    font-size: 28px;
+    color: var(--primary);
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.info-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+}
+
+.info-card {
+    background-color: var(--bg-card);
+    padding: 24px;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
+}
+
+.info-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.info-card h3 {
+    color: var(--primary);
+    margin-bottom: 12px;
+    font-size: 18px;
+}
+
+.estados-posibles {
+    background-color: var(--bg-card);
+    padding: 32px;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-color);
+}
+
+.estados-posibles h2 {
+    font-size: 24px;
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+.estados-posibles ul {
+    list-style: none;
+}
+
+.estados-posibles ul li {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.estados-posibles ul li:last-child {
+    border-bottom: none;
+}
+
+/* ==========================================================================
+   11. FAQ (faq.html) - HU-08
+   ========================================================================== */
+.titulo-faq {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.titulo-faq h1 {
+    font-size: 36px;
+    color: var(--primary);
+    margin-bottom: 16px;
+}
+
+.faq-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.faq-item {
+    background-color: var(--bg-card);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-color);
+    padding: 24px 28px;
+    transition: var(--transition);
+}
+
+.faq-item:hover {
+    transform: translateX(4px);
+    border-left: 4px solid var(--secondary);
+}
+
+.faq-item h3 {
+    color: var(--primary);
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.faq-item p {
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+.faq-item a {
+    color: var(--secondary);
+    text-decoration: none;
+}
+
+.faq-item a:hover {
+    text-decoration: underline;
+}
+
+/* ==========================================================================
+   12. CONTACTO (contacto.html) - HU-10
+   ========================================================================== */
+.titulo-contacto {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.titulo-contacto h1 {
+    font-size: 36px;
+    color: var(--primary);
+    margin-bottom: 16px;
+}
+
+.datos-contacto {
+    margin-bottom: 48px;
+}
+
+.datos-contacto h2 {
+    font-size: 28px;
+    color: var(--primary);
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.contacto-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+}
+
+.contacto-item {
+    background-color: var(--bg-card);
+    padding: 24px;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-color);
+    text-align: center;
+}
+
+.contacto-item h3 {
+    color: var(--primary);
+    margin-bottom: 16px;
+    font-size: 18px;
+}
+
+.contacto-item p {
+    color: var(--text-muted);
+    margin-bottom: 8px;
+}
+
+.formulario-consulta {
+    background-color: var(--bg-card);
+    padding: 32px;
+    border-radius: var(--radius-lg);
+    margin-bottom: 40px;
+    border: 1px solid var(--border-color);
+}
+
+.formulario-consulta h2 {
+    font-size: 28px;
+    color: var(--primary);
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.formulario-consulta>p {
+    text-align: center;
+    color: var(--text-muted);
+    margin-bottom: 24px;
+}
+
+.mapa {
+    background-color: var(--bg-card);
+    padding: 32px;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-color);
+}
+
+.mapa h2 {
+    font-size: 24px;
+    color: var(--primary);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.mapa-placeholder {
+    text-align: center;
+}
+
+.mapa-placeholder p {
+    color: var(--text-muted);
+    margin-bottom: 16px;
+}
+
+.mapa-imagen-placeholder {
+    background-color: var(--bg-main);
+    padding: 40px;
+    border-radius: var(--radius-md);
+    border: 1px dashed var(--border-color);
+    color: var(--text-muted);
+}
+
+/* ==========================================================================
+   13. GALERÍA (galeria.html) - HU-13
+   ========================================================================== */
+.titulo-galeria {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.titulo-galeria h1 {
+    font-size: 36px;
+    color: var(--primary);
+    margin-bottom: 16px;
+}
+
+.categoria-galeria {
+    margin-bottom: 48px;
+}
+
+.categoria-galeria h2 {
+    font-size: 28px;
+    color: var(--primary);
+    margin-bottom: 24px;
+    border-left: 4px solid var(--secondary);
+    padding-left: 16px;
+}
+
+.grid-galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+}
+
+.galeria-item {
+    background-color: var(--bg-card);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    border: 1px solid var(--border-color);
+}
+
+.galeria-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.galeria-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.galeria-item p {
+    padding: 16px;
+    text-align: center;
+    font-weight: 500;
+    color: var(--text-main);
+    background-color: var(--bg-card);
+}
+
+/* ==========================================================================
+   14. INSTITUCIONAL (institucional.html) - HU-12
+   ========================================================================== */
+.titulo-institucional {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.titulo-institucional h1 {
+    font-size: 36px;
+    color: var(--primary);
+    margin-bottom: 16px;
+}
+
+.historia {
+    background-color: var(--bg-card);
+    padding: 32px;
+    border-radius: var(--radius-lg);
+    margin-bottom: 40px;
+    border: 1px solid var(--border-color);
+}
+
+.historia h2 {
+    font-size: 28px;
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+.historia p {
+    color: var(--text-muted);
+    margin-bottom: 16px;
+    line-height: 1.7;
+}
+
+.historia p:last-child {
+    margin-bottom: 0;
+}
+
+.mision-vision-valores {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+    margin-bottom: 40px;
+}
+
+.mision,
+.vision,
+.valores {
+    background-color: var(--bg-card);
+    padding: 28px;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
+}
+
+.mision:hover,
+.vision:hover,
+.valores:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.mision h3,
+.vision h3,
+.valores h3 {
+    font-size: 22px;
+    color: var(--primary);
+    margin-bottom: 16px;
+}
+
+.mision p,
+.vision p {
+    color: var(--text-muted);
+    line-height: 1.7;
+}
+
+.valores ul {
+    list-style: none;
+}
+
+.valores ul li {
+    padding: 8px 0;
+    color: var(--text-muted);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.valores ul li:last-child {
+    border-bottom: none;
+}
+
+.certificaciones {
+    background-color: var(--bg-card);
+    padding: 32px;
+    border-radius: var(--radius-lg);
+    margin-bottom: 40px;
+    border: 1px solid var(--border-color);
+}
+
+.certificaciones h2 {
+    font-size: 28px;
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+.certificaciones ul {
+    list-style: none;
+}
+
+.certificaciones ul li {
+    padding: 10px 0 10px 28px;
+    position: relative;
+    color: var(--text-muted);
+}
+
+.certificaciones ul li::before {
+    content: "🏆";
+    position: absolute;
+    left: 0;
+}
+
+.datos-clave {
+    background-color: var(--primary);
+    padding: 48px 32px;
+    border-radius: var(--radius-lg);
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.datos-clave h2 {
+    font-size: 28px;
+    color: white;
+    margin-bottom: 32px;
+}
+
+.numeros-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 32px;
+}
+
+.numero-item {
+    text-align: center;
+}
+
+.numero-grande {
+    display: block;
+    font-size: 48px;
+    font-weight: 800;
+    color: var(--secondary);
+    margin-bottom: 8px;
+}
+
+.numero-item p {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 16px;
+}
+
+.equipo-directivo {
+    margin-bottom: 40px;
+}
+
+.equipo-directivo h2 {
+    font-size: 28px;
+    color: var(--primary);
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.directivos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+}
+
+.directivo {
+    background-color: var(--bg-card);
+    padding: 24px;
+    border-radius: var(--radius-lg);
+    text-align: center;
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
+}
+
+.directivo:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.directivo h3 {
+    color: var(--primary);
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+
+.directivo p {
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
+.politicas {
+    background-color: var(--bg-card);
+    padding: 32px;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-color);
+}
+
+.politicas h2 {
+    font-size: 28px;
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+.politicas ul {
+    list-style: none;
+}
+
+.politicas ul li {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-muted);
+}
+
+.politicas ul li:last-child {
+    border-bottom: none;
+}
+
+.politicas ul li strong {
+    color: var(--primary);
+}
+
+/* ==========================================================================
+   15. FOOTER (Información de Contacto Accesible)
    ========================================================================== */
 footer {
     background-color: #0f172a;
-    /* Gris pizarra corporativo profundo */
     color: #cbd5e1;
     font-size: 14px;
     padding: 60px 0 40px 0;
@@ -248,6 +1360,15 @@ footer p {
     margin-bottom: 10px;
 }
 
+footer a {
+    color: var(--secondary);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
 .footer-copyright {
     max-width: 1200px;
     margin: 30px auto 0 auto;
@@ -259,12 +1380,11 @@ footer p {
 }
 
 /* ==========================================================================
-   6. RESPONSIVE DESIGN (UX Adaptativa)
+   16. RESPONSIVE DESIGN (UX Adaptativa) - HU-11
    ========================================================================== */
 @media (max-width: 1024px) {
     .especialidad-card {
         width: calc(33.33% - 24px);
-        /* 3 columnas en pantallas medianas o tablets */
     }
 }
 
@@ -288,6 +1408,7 @@ footer p {
 
     .nav-box {
         margin-top: 16px;
+        text-align: center;
     }
 
     nav ul li {
@@ -296,7 +1417,6 @@ footer p {
 
     .especialidad-card {
         width: calc(50% - 20px);
-        /* 2 columnas en smartphones horizontales */
         margin: 10px;
         padding: 24px 16px;
     }
@@ -305,135 +1425,433 @@ footer p {
         text-align: center;
         margin-top: 20px;
     }
-}
 
-@media (max-width: 480px) {
-    .especialidad-card {
-        width: 100%;
-        /* 1 columna pura en dispositivos móviles verticales */
-        margin: 10px 0;
+    /* Hero responsive */
+    .hero-banner {
+        min-height: 380px;
     }
 
-    .titulo-especialidades h1 {
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    .urgencias-card {
+        margin: -40px auto 40px auto;
+        padding: 24px 20px;
+    }
+
+    .urgencias-card h2 {
+        font-size: 22px;
+    }
+
+    .urgencias-card .telefono-urgencias {
+        font-size: 24px;
+    }
+
+    .btn-group {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section-title h2 {
         font-size: 26px;
     }
-}
 
+    .section-title p {
+        font-size: 16px;
+    }
 
-/* --- ESTILOS DE LA TARJETA PROFESIONAL --- */
-
-/* Contenedor principal de la tarjeta horizontal */
-.tarjeta-profesional {
-    display: flex;
-    flex-direction: row;
-    /* Mantiene la foto a la izquierda y el texto a la derecha */
-    align-items: center;
-    /* Centra verticalmente la foto con la información */
-    gap: 24px;
-    background-color: #ffffff;
-    border-radius: 16px;
-    padding: 24px;
-    max-width: 600px;
-    /* Ancho máximo ideal para contener el diseño */
-    margin-bottom: 20px;
-    /* Separación entre tarjetas */
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-    border: 1px solid #f0f4f8;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.tarjeta-profesional:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
-}
-
-/* Contenedor fijo de la foto */
-.foto-profesional {
-    flex-shrink: 0;
-    width: 140px;
-    height: 140px;
-    border-radius: 12px;
-    overflow: hidden;
-    background-color: #e0e0e0;
-    /* Color gris de fondo por si no carga la imagen */
-}
-
-.foto-profesional img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center top;
-}
-
-/* Contenedor del bloque de texto (Aquí se corrige el orden) */
-.info-profesional {
-    display: flex;
-    flex-direction: column;
-    /* Fuerza a que el h3, los p y el botón vayan uno abajo del otro */
-    flex-grow: 1;
-    /* Ocupa todo el espacio restante disponible a la derecha */
-}
-
-/* Tipografía e información */
-.tarjeta-profesional h3 {
-    margin: 0 0 10px 0;
-    color: #1a202c;
-    font-size: 1.3rem;
-    font-weight: 600;
-}
-
-.tarjeta-profesional p {
-    margin: 5px 0;
-    color: #4a5568;
-    font-size: 0.95rem;
-    line-height: 1.4;
-}
-
-.tarjeta-profesional p strong {
-    color: #2b6cb0;
-    /* Color azul para destacar las etiquetas */
-    font-weight: 600;
-}
-
-/* --- BOTÓN RECTANGULAR CORREGIDO (Ancho completo del bloque de texto) --- */
-.btn-perfil {
-    display: block;
-    /* Ocupa el ancho disponible de la columna de texto */
-    text-align: center;
-    margin-top: 16px;
-    /* Empuja el botón hacia abajo separándolo de los horarios */
-    padding: 10px 20px;
-    background-color: #2b6cb0;
-    /* Azul médico */
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 0.95rem;
-    font-weight: 500;
-    border-radius: 8px;
-    transition: background-color 0.2s ease, transform 0.1s ease;
-}
-
-/* Efectos del botón */
-.btn-perfil:hover {
-    background-color: #2c5282;
-}
-
-.btn-perfil:active {
-    transform: scale(0.99);
-}
-
-/* Adaptabilidad para pantallas móviles pequeñas */
-@media (max-width: 480px) {
+    /* Tarjeta profesional responsive */
     .tarjeta-profesional {
         flex-direction: column;
-        /* Se vuelve vertical en móviles */
         text-align: center;
         padding: 20px;
     }
 
     .btn-perfil {
         width: 100%;
-        /* Sigue ocupando todo el ancho en móvil */
+    }
+}
+
+@media (max-width: 480px) {
+    .especialidad-card {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .titulo-especialidades h1 {
+        font-size: 26px;
+    }
+
+    .grid-galeria {
+        grid-template-columns: 1fr;
+    }
+
+    .info-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .contacto-info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .mision-vision-valores {
+        grid-template-columns: 1fr;
+    }
+
+    .numeros-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .directivos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Hero responsive mobile */
+    .hero-banner {
+        min-height: 300px;
+    }
+
+    .hero-content {
+        padding: 40px 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 24px;
+    }
+
+    .hero-content p {
+        font-size: 14px;
+    }
+
+    .urgencias-card .telefono-urgencias {
+        font-size: 20px;
+    }
+}
+
+/* ==========================================================================
+   17. FONDO ÚNICO CON IMAGEN PARA TODO EL SITIO
+   ========================================================================== */
+
+/* Imagen de fondo común para todo el body */
+body {
+    background-image: url('https://images.unsplash.com/photo-1551076805-e1869033e561?q=80&w=2070&auto=format&fit=crop');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+/* Capa de color general sobre la imagen (para dar tono base) */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(10, 26, 74, 0.3);
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* ===== HERO BANNER ===== */
+.hero-banner {
+    position: relative;
+    background: linear-gradient(135deg, rgba(30, 58, 138, 0.85) 0%, rgba(10, 26, 74, 0.9) 100%);
+    /* Sin imagen propia, hereda la del body */
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 60px;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 60px 40px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 16px;
+    letter-spacing: -0.5px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.hero-content p {
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.92);
+    margin-bottom: 32px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== MAIN (contenido blanco TRANSPARENTE) ===== */
+main {
+    position: relative;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.75);
+    /* TRANSPARENTE - se ve la imagen atrás */
+    backdrop-filter: blur(2px);
+    border-radius: var(--radius-lg);
+    margin: 0 auto 80px auto;
+    padding: 40px 24px;
+    max-width: 1200px;
+}
+
+/* Las tarjetas y secciones internas siguen siendo blancas (para contraste) */
+.tarjeta-profesional,
+.especialidad-card,
+.servicio-card,
+.acceso-card,
+.faq-item,
+.info-card,
+.galeria-item,
+.directivo,
+.mision,
+.vision,
+.valores,
+.contacto-item,
+.formulario-turno,
+.formulario-consulta,
+.formulario-consulta-estudios,
+.info-especialidad,
+.estados-posibles,
+.certificaciones,
+.politicas,
+.mapa,
+.historia {
+    background-color: var(--bg-card);
+}
+
+/* La tarjeta de urgencias queda blanca sólida */
+.urgencias-card {
+    background-color: white;
+    position: relative;
+    z-index: 2;
+}
+
+/* Títulos de sección dentro del main (para contraste con fondo transparente) */
+.section-title h2,
+.titulo-especialidades h1,
+.titulo-especialidad h1,
+.titulo-estudios h1,
+.titulo-faq h1,
+.titulo-contacto h1,
+.titulo-galeria h1,
+.titulo-institucional h1 {
+    color: var(--primary);
+}
+
+.section-title p,
+.titulo-especialidades p,
+.titulo-especialidad p {
+    color: var(--text-muted);
+}
+
+/* ===== HEADER (semi-transparente) ===== */
+header {
+    position: relative;
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(226, 232, 240, 0.5);
+}
+
+/* ===== FOOTER ===== */
+footer {
+    position: relative;
+    z-index: 1;
+    background-color: rgba(15, 23, 42, 0.92);
+    backdrop-filter: blur(4px);
+    border-top: 4px solid var(--secondary);
+}
+
+.footer-wrap {
+    position: relative;
+    z-index: 1;
+}
+
+/* ===== AJUSTE DE TARJETAS PARA MANTENER LEGIBILIDAD ===== */
+/* Las tarjetas tienen sombra más pronunciada para destacar */
+.especialidad-card,
+.servicio-card,
+.acceso-card,
+.tarjeta-profesional,
+.faq-item,
+.info-card,
+.galeria-item {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* ==========================================================================
+   18. MENÚ MEJORADO (fondo blanco - texto azul fuerte)
+   ========================================================================== */
+
+/* Texto más grande, negrita y azul profundo */
+nav ul li a {
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 15px;
+    padding: 8px 12px;
+    transition: all 0.25s ease;
+    position: relative;
+}
+
+/* Hover: se oscurece o cambia a teal */
+nav ul li a:hover {
+    color: var(--secondary);
+}
+
+/* Línea decorativa al hacer hover */
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 12px;
+    right: 12px;
+    height: 3px;
+    background-color: var(--secondary);
+    transform: scaleX(0);
+    transition: transform 0.25s ease;
+}
+
+nav ul li a:hover::after {
+    transform: scaleX(1);
+}
+
+/* Logo más visible */
+.logo a {
+    color: var(--primary);
+    font-size: 22px;
+    font-weight: 800;
+}
+
+/* Ajuste espaciado */
+nav ul li {
+    margin-left: 20px;
+}
+
+/* Espaciado para páginas sin hero banner */
+main.no-banner {
+    margin-top: 60px;
+}
+
+/* ==========================================================================
+   21. HEADER FIJO AL HACER SCROLL (sticky)
+   ========================================================================== */
+
+/* El header ya tiene position: sticky, reforzamos */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+/* Opcional: cuando el usuario scrollea, el header se encoge un poco */
+header.scrolled {
+    padding: 0;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Animación suave del header al hacer scroll */
+.header-wrap {
+    transition: all 0.3s ease;
+}
+
+header.scrolled .header-wrap {
+    height: 65px;
+}
+
+header.scrolled .logo a {
+    font-size: 20px;
+}
+
+/* Ajuste para que el contenido no quede tapado por el header fijo */
+/* Esto ya lo tenemos con main class="no-banner" y el padding-top */
+
+/* ==========================================================================
+   22. MENÚ HAMBURGUESA SIN JS (responsive)
+   ========================================================================== */
+
+/* Ocultar el checkbox y la etiqueta en desktop */
+.menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    font-size: 28px;
+    color: var(--primary);
+    user-select: none;
+}
+
+/* En tablets y móviles (pantallas menores a 768px) */
+@media (max-width: 768px) {
+
+    /* Ocultar el menú normal */
+    nav ul {
+        display: none;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        border-top: 1px solid var(--border-color);
+        z-index: 999;
+    }
+
+    /* Mostrar los items en columna */
+    nav ul li {
+        display: block;
+        margin: 0;
+        text-align: center;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 15px 20px;
+        font-size: 16px;
+    }
+
+    nav ul li a::after {
+        display: none;
+    }
+
+    /* Mostrar el ícono hamburguesa */
+    .menu-icon {
+        display: inline-block;
+    }
+
+    /* Cuando el checkbox está checked, mostrar el menú */
+    .menu-toggle:checked+.menu-icon+nav ul {
+        display: block;
+    }
+
+    /* Ajustar el header para móvil */
+    .header-wrap {
+        position: relative;
+    }
+
+    .nav-box {
+        text-align: right;
     }
 }
