@@ -14,80 +14,142 @@
 
     <!-- ===== HEADER ===== -->
     <header>
-        <div class="logo">
-            <a href="index.html">🏥 Centro de Salud</a>
+        <div class="container-nav">
+            <div class="header-wrap">
+                <div class="logo-box">
+                    <div class="logo">
+                        <a href="index.html">🏥 Centro de Salud</a>
+                    </div>
+                </div>
+                <div class="nav-box">
+                    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+                    <label for="menu-toggle" class="menu-icon">☰</label>
+                    <nav>
+                        <ul>
+                            <li><a href="index.html">Inicio</a></li>
+                            <li><a href="pages/especialidades.html">Especialidades</a></li>
+                            <li><a href="pages/faq.html">FAQ</a></li>
+                            <li><a href="pages/galeria.html">Galería</a></li>
+                            <li><a href="pages/institucional.html">El Centro</a></li>
+                            <li><a href="pages/contacto.html">Contacto</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
         </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="pages/especialidades.html">Especialidades</a></li>
-                <li><a href="pages/estudios.html">Resultados de Estudios</a></li>
-                <li><a href="pages/faq.html">FAQ</a></li>
-                <li><a href="pages/galeria.html">Galería</a></li>
-                <li><a href="pages/institucional.html">El Centro</a></li>
-                <li><a href="pages/contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
     </header>
+
+    <!-- ===== HERO BANNER CON IMAGEN DEGRADADA ===== -->
+    <div class="hero-banner">
+        <div class="hero-content">
+            <h1>Excelencia en atención médica</h1>
+            <p>Más de 20 años cuidando tu salud y la de tu familia con profesionales de primer nivel y tecnología de
+                última generación.</p>
+        </div>
+    </div>
 
     <!-- ===== MAIN CONTENT ===== -->
     <main>
 
-        <!-- SECCIÓN: URGENCIAS (HU-01) -->
-        <section class="urgencias">
-            <h1>Urgencias 24/7</h1>
-            <p>Atención inmediata las 24 horas, todos los días del año.</p>
-            <p><strong>Teléfono de urgencias: 0800-123-4567</strong></p>
-            <a href="pages/contacto.html" class="btn">Acudir a urgencias →</a>
-        </section>
+        <!-- SECCIÓN: URGENCIAS FLOTANTE (HU-01) -->
+        <div class="urgencias-card">
+            <span class="badge-urgencias">🆘 ATENCIÓN INMEDIATA</span>
+            <h2>Urgencias 24/7</h2>
+            <p>Atención médica inmediata las 24 horas, todos los días del año. No necesitás turno.</p>
+            <div class="telefono-urgencias">
+                📞 <a href="tel:08001234567">0800-123-4567</a>
+            </div>
+            <div class="btn-group">
+                <a href="tel:08001234567" class="btn">Llamar ahora</a>
+                <a href="pages/contacto.html" class="btn btn-outline">Acudir al centro →</a>
+            </div>
+        </div>
 
         <!-- SECCIÓN: SERVICIOS DISPONIBLES (HU-02) -->
-        <section class="servicios">
+        <div class="section-title">
             <h2>Nuestros Servicios</h2>
-            <ul>
-                <li>🏥 Guardia médica permanente</li>
-                <li>🩺 Consultas con especialistas</li>
-                <li>📋 Estudios de diagnóstico por imágenes</li>
-                <li>🔬 Análisis clínicos</li>
-                <li>💊 Farmacia interna</li>
-                <li>🚑 Ambulancias</li>
-            </ul>
-        </section>
+            <p>Contamos con una amplia variedad de servicios médicos para cuidar tu salud integral</p>
+        </div>
 
-        <!-- SECCIÓN: ACCESO RÁPIDO A ESPECIALIDADES -->
-        <section class="acceso-especialidades">
-            <h2>Conocé nuestras especialidades</h2>
-            <p>Más de 13 especialidades médicas a tu disposición</p>
-            <a href="pages/especialidades.html" class="btn">Ver todas las especialidades →</a>
-        </section>
+        <div class="servicios-grid">
+            <div class="servicio-card">
+                <div class="servicio-icon">🏥</div>
+                <h3>Guardia médica permanente</h3>
+                <p>Atención las 24 horas, los 365 días del año.</p>
+            </div>
+            <div class="servicio-card">
+                <div class="servicio-icon">🩺</div>
+                <h3>Consultas con especialistas</h3>
+                <p>Más de 13 especialidades médicas a tu disposición.</p>
+            </div>
+            <div class="servicio-card">
+                <div class="servicio-icon">📋</div>
+                <h3>Estudios de diagnóstico</h3>
+                <p>Radiografías, ecografías, tomografías y resonancias.</p>
+            </div>
+            <div class="servicio-card">
+                <div class="servicio-icon">🔬</div>
+                <h3>Análisis clínicos</h3>
+                <p>Laboratorio propio con resultados rápidos y precisos.</p>
+            </div>
+            <div class="servicio-card">
+                <div class="servicio-icon">💊</div>
+                <h3>Farmacia interna</h3>
+                <p>Medicamentos al instante, sin salir del centro.</p>
+            </div>
+            <div class="servicio-card">
+                <div class="servicio-icon">🚑</div>
+                <h3>Servicio de ambulancias</h3>
+                <p>Traslados programados y emergencias.</p>
+            </div>
+        </div>
 
-        <!-- SECCIÓN: CONSULTAR RESULTADOS (acceso rápido a HU-07) -->
-        <section class="acceso-estudios">
-            <h2>Consultá el estado de tus estudios</h2>
-            <p>Ingresá para saber si tus resultados ya están listos para retirar</p>
-            <a href="pages/estudios.html" class="btn">Consultar resultados →</a>
-        </section>
+        <!-- SECCIÓN: ACCESO RÁPIDO -->
+        <div class="section-title">
+            <h2>Acceso Rápido</h2>
+            <p>Lo que necesitás, a un clic de distancia</p>
+        </div>
 
-        <!-- SECCIÓN: INFORMACIÓN INSTITUCIONAL RÁPIDA -->
-        <section class="info-institucional">
-            <h2>Más de 20 años cuidando tu salud</h2>
-            <p>Contamos con profesionales capacitados, tecnología de última generación y atención personalizada.</p>
-            <a href="pages/institucional.html" class="btn">Conocé nuestro centro →</a>
-        </section>
+        <div class="acceso-rapido-grid">
+            <a href="pages/especialidades.html" class="acceso-card">
+                <div class="acceso-icon">🩺</div>
+                <h3>Especialidades</h3>
+                <p>Conocé todas nuestras especialidades médicas y solicitá tu turno.</p>
+                <span class="btn-small">Ver especialidades →</span>
+            </a>
+
+            <a href="pages/estudios.html" class="acceso-card">
+                <div class="acceso-icon">📋</div>
+                <h3>Estado de tus Estudios</h3>
+                <p>Consultá el estado de tus análisis y estudios médicos.</p>
+                <span class="btn-small">Consultar →</span>
+            </a>
+
+            <a href="pages/institucional.html" class="acceso-card">
+                <div class="acceso-icon">🏛️</div>
+                <h3>Conocé el centro</h3>
+                <p>Más de 20 años de trayectoria cuidando tu salud.</p>
+                <span class="btn-small">Más información →</span>
+            </a>
+        </div>
 
     </main>
 
     <!-- ===== FOOTER ===== -->
     <footer>
-        <div class="footer-contacto">
-            <p>📞 Central: 011-4567-8901</p>
-            <p>🆘 Urgencias: 0800-123-4567</p>
-            <p>📧 consultas@centrosalud.com</p>
-            <p>📍 Av. Siempre Viva 123, Ciudad</p>
-        </div>
-        <div class="footer-horarios">
-            <p>🕒 Atención al público: Lun a Vie 8 a 20hs</p>
-            <p>🕒 Guardia: 24hs - 365 días</p>
+        <div class="footer-wrap">
+            <div class="footer-contacto">
+                <p>📞 Central: 011-4567-8901</p>
+                <p>🆘 Urgencias: 0800-123-4567</p>
+                <p>📧 consultas@centrosalud.com</p>
+                <p>📍 Av. Siempre Viva 123, Ciudad</p>
+            </div>
+            <div class="footer-horarios">
+                <p>🕒 Atención al público: Lun a Vie 8 a 20hs</p>
+                <p>🕒 Guardia: 24hs - 365 días</p>
+                <p>📄 <a href="#">Política de privacidad</a></p>
+                <p>♿ Accesibilidad</p>
+            </div>
         </div>
         <div class="footer-copyright">
             <p>&copy; 2024 Centro de Salud - Todos los derechos reservados</p>
