@@ -12,23 +12,32 @@
 <body>
 
     <header>
-        <div class="logo">
-            <a href="../../index.html">🏥 Centro de Salud</a>
+        <div class="container-nav">
+            <div class="header-wrap">
+                <div class="logo-box">
+                    <div class="logo">
+                        <a href="../../index.html">🏥 Centro de Salud</a>
+                    </div>
+                </div>
+                <div class="nav-box">
+                    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+                    <label for="menu-toggle" class="menu-icon">☰</label>
+                    <nav>
+                        <ul>
+                            <li><a href="../../index.html">Inicio</a></li>
+                            <li><a href="../especialidades.html">Especialidades</a></li>
+                            <li><a href="../faq.html">FAQ</a></li>
+                            <li><a href="../galeria.html">Galería</a></li>
+                            <li><a href="../institucional.html">El Centro</a></li>
+                            <li><a href="../contacto.html">Contacto</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
         </div>
-        <nav>
-            <ul>
-                <li><a href="../../index.html">Inicio</a></li>
-                <li><a href="../especialidades.html">Especialidades</a></li>
-                <li><a href="../estudios.html">Resultados de Estudios</a></li>
-                <li><a href="../faq.html">FAQ</a></li>
-                <li><a href="../galeria.html">Galería</a></li>
-                <li><a href="../institucional.html">El Centro</a></li>
-                <li><a href="../contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
     </header>
 
-    <main>
+    <main class="no-banner">
 
         <section class="titulo-especialidad">
             <h1>Odontología</h1>
@@ -41,25 +50,32 @@
             <div class="tarjetas-profesionales">
                 <div class="tarjeta-profesional">
                     <div class="foto-profesional">
-                        <img src="../../assets/img/profesionales/odt-sebastian-flores.jpg"
-                            alt="Foto del Odont. Sebastián Flores"
-                            onerror="this.src='https://placehold.co/150x150?text=Od.+Flores'">
+                        <img src="../../assets/img/profesionales/dr-gabriel-torres.jpg"
+                            alt="Foto del Dr. Gabriel Torres"
+                            onerror="this.src='https://placehold.co/150x150?text=Dr.+Torres'">
                     </div>
-                    <h3>Odont. Sebastián Flores</h3>
-                    <p><strong>Especialidad:</strong> Odontología general</p>
-                    <p><strong>Matrícula:</strong> MO 24242</p>
-                    <p><strong>Horarios:</strong> Lun, Mié, Vie 9 a 14hs</p>
+                    <div class="info-profesional">
+                        <h3>Dr. Gabriel Torres</h3>
+                        <p><strong>Especialidad:</strong> Odontología General</p>
+                        <p><strong>Matrícula:</strong> MP 55667</p>
+                        <p><strong>Horarios:</strong> Lun, Mar, Jue 13 a 18hs</p>
+                        <a href="#" class="btn-perfil">Ver perfil</a>
+                    </div>
                 </div>
+
                 <div class="tarjeta-profesional">
                     <div class="foto-profesional">
-                        <img src="../../assets/img/profesionales/odt-carolina-iglesias.jpg"
-                            alt="Foto de la Odont. Carolina Iglesias"
-                            onerror="this.src='https://placehold.co/150x150?text=Od.+Iglesias'">
+                        <img src="../../assets/img/profesionales/dra-natalia-rios.jpg"
+                            alt="Foto de la Dra. Natalia Ríos"
+                            onerror="this.src='https://placehold.co/150x150?text=Dra.+Ríos'">
                     </div>
-                    <h3>Odont. Carolina Iglesias</h3>
-                    <p><strong>Especialidad:</strong> Ortodoncia</p>
-                    <p><strong>Matrícula:</strong> MO 25252</p>
-                    <p><strong>Horarios:</strong> Mar, Jue 14 a 19hs</p>
+                    <div class="info-profesional">
+                        <h3>Dra. Natalia Ríos</h3>
+                        <p><strong>Especialidad:</strong> Ortodoncia</p>
+                        <p><strong>Matrícula:</strong> MP 55611</p>
+                        <p><strong>Horarios:</strong> Mié, Vie 08 a 13hs</p>
+                        <a href="#" class="btn-perfil">Ver perfil</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -95,8 +111,8 @@
                     <label for="profesional">Seleccionar profesional *</label>
                     <select id="profesional" name="profesional" required>
                         <option value="">-- Elegir profesional --</option>
-                        <option value="odt-sebastian-flores">Odont. Sebastián Flores</option>
-                        <option value="odt-carolina-iglesias">Odont. Carolina Iglesias</option>
+                        <option value="dr-gabriel-torres">Dr. Gabriel Torres</option>
+                        <option value="dra-natalia-rios">Dra. Natalia Ríos</option>
                     </select>
                 </div>
                 <div class="campo-formulario">
