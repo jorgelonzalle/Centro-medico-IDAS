@@ -1855,3 +1855,170 @@ header.scrolled .logo a {
         text-align: right;
     }
 }
+
+
+/*  ESTILOS SECCIÓN URGENCIAS (HU-01) */
+
+.urgencias {
+    /* Combinación de gradiente protector y la imagen médica desenfocada */
+    background: linear-gradient(135deg, rgba(20, 20, 20, 0.9) 0%, rgba(183, 28, 28, 0.85) 100%), 
+                url('https://static.vecteezy.com/system/resources/previews/034/837/588/large_2x/blurred-modern-hospital-corridor-background-abstract-blurred-clinic-hallway-interior-entrance-of-medical-emergency-room-in-hospital-healthcare-and-medical-center-background-generative-ai-photo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll; /* Cambiar a 'fixed' si querés efecto parallax */
+    
+    border-top: 6px solid #E53935;
+    padding: 3.5rem 2rem;
+    margin: 2.5rem auto;
+    max-width: 900px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* Encabezado */
+.urgencias-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+/* Cambiamos las letras a blanco para que contrasten con el nuevo fondo */
+.urgencias h1 {
+    color: #ffffff;
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin: 0 0 0.75rem 0;
+    letter-spacing: -0.5px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.urgencias-sub {
+    color: #f5f5f5;
+    font-size: 1.2rem;
+    margin: 0 0 2rem 0;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+/* Contenedor del nuevo botón */
+.urgencias-main-action {
+    margin-top: 1.5rem;
+}
+
+/* Botón principal estilizado estilo "Llamar" */
+.btn-urgencia {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background-color: #E53935;
+    color: #ffffff;
+    padding: 1.1rem 3rem;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    box-shadow: 0 6px 20px rgba(229, 57, 53, 0.4);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.btn-urgencia:hover {
+    background-color: #ffffff;
+    color: #E53935;
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
+    transform: translateY(-3px);
+}
+
+.btn-arrow {
+    transition: transform 0.2s ease;
+}
+
+.btn-urgencia:hover .btn-arrow {
+    transform: translateX(5px);
+}
+
+/* Grid de Tarjetas Internas */
+.urgencias-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+/* Tarjetas semi-transparentes modernas (Glassmorphism sutil) */
+.urgencias-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(5px); /* Efecto cristal para navegadores modernos */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 1.5rem;
+    border-radius: 14px;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.urgencias-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    background: #ffffff;
+}
+
+.card-icon {
+    font-size: 2rem;
+    background: #fff5f5;
+    padding: 0.5rem;
+    border-radius: 12px;
+    line-height: 1;
+}
+
+.card-info h3 {
+    margin: 0 0 0.4rem 0;
+    color: #1a1a1a;
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+
+.card-info p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #666666;
+}
+
+/* Enlaces y textos dentro de las tarjetas */
+.link-tel {
+    color: #E53935;
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: 800;
+    display: inline-block;
+    margin-bottom: 0.25rem;
+}
+
+.direccion-texto {
+    color: #222222 !important;
+    font-size: 1.05rem !important;
+    font-weight: 600;
+    margin-bottom: 0.25rem !important;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .urgencias {
+        padding: 2.5rem 1.25rem;
+        margin: 1.5rem 1rem;
+    }
+    
+    .urgencias h1 {
+        font-size: 2rem;
+    }
+
+    .urgencias-grid {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+    
+    .btn-urgencia {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
